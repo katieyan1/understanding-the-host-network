@@ -5,8 +5,6 @@ from mio.env import *
 from mio.stats import *
 import mio.model as model
 
-STATS_PATH = '/home/midhul/membw-eval'
-
 def expand_ranges(x):
     result = []
     for part in x.split(','):
@@ -23,6 +21,7 @@ def expand_ranges(x):
 root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
 config_path = os.path.join(root_dir, 'config.json')
 env = Environment(config_path)
+STATS_PATH = env.get_stats_path()
 
 parser = argparse.ArgumentParser()
 parser.add_argument('config', help='Label for experiment')
@@ -36,7 +35,7 @@ parser.add_argument('--io_size', help='IO size for FIO', type=int, default=8*102
 parser.add_argument('--filter_chas', help='List of CHAs to filter metrics on', default=','.join(env.get_chas()))
 parser.add_argument('--filter_irps', help='List of IRPs to filter metrics on', default=','.join(env.get_irps()))
 default_ssds = ['SSD%d'%(i) for i in range(len(env.get_ssds()))]
-parser.add_argument('--filter_ssds', help='List of SSDs to filter metrics on', default=default_ssds)
+parser.add_argument('--filter_ssds', help='List of SSDs to filter metrics on', default=','.join(default_ssds))
 parser.add_argument('--model', help='Apply model')
 
 args = parser.parse_args(sys.argv[1:])
@@ -194,6 +193,8 @@ for col in cols:
     elems = col.split(':')
     metric_type = elems[0]
     if metric_type == 'model':
+        if env.get_arch() != 'cascadelake':
+            raise Exception('Analytical models are calibrated for Cascade Lake and are unavailable on %s' % env.get_arch())
         model_name = elems[1]
         model_metric = elems[2]
 

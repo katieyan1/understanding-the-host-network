@@ -4,7 +4,7 @@ from mio.env import *
 class StatStore:
     def __init__(self):
         # Set configs
-        root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
+        root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
         config_path = os.path.join(root_dir, 'config.json')
         env = Environment(config_path)
         self.max_ssds = len(env.get_ssds())
@@ -23,7 +23,7 @@ class StatStore:
             'l1_missrate': (lambda x, y, z: (x+y)/z, ['load_l1_misses', 'load_l1_fbhit', 'loads']),
             'l2_missrate': (lambda x, y: (x)/(x+y), ['load_l2_misses', 'load_l2_hits']),
             'l3_missrate': (lambda x, y: (x)/(x+y), ['load_l3_misses', 'load_l3_hits']),
-            'rpq_occupancy': (lambda x: x/1466500000.0, ['rpq_occ_agg']),
+            'rpq_occupancy': (lambda x: x/self.imc_freq, ['rpq_occ_agg']),
             'switching_delay': (lambda z, x, y: x*(y/(z*1e6/64))*8.18, ['memreadbw', 'rpq_occupancy', 'wmm_to_rmm']),
             'write_hol': (lambda z, x, y: x*(y/z)*2.73, ['memreadbw', 'rpq_occupancy', 'memwritebw']),
             'act_penalty': (lambda z, x, y: ((x+y)/(z*1e6/64))*15, ['memreadbw', 'acts_read', 'acts_byp']),
@@ -43,11 +43,11 @@ class StatStore:
             'acts_read_total': (lambda x, y: x + 4, ['acts_read', 'acts_byp']),
             'lines_written': (lambda x: x*1e6/64, ['memwritebw']),
             'drd_occupancy': (lambda x: x/self.cha_freq, ['drd_occ_agg']),
-            'drd_latency': (lambda x, y: x*1e9/y, ['drd_occupancy', 'drd_inserts']),
+            'drd_latency': (lambda x, y: x*1e9/y if y else float('nan'), ['drd_occupancy', 'drd_inserts']),
             'wbeftoi_occupancy': (lambda x: x/self.cha_freq, ['wbeftoi_occ_agg']),
-            'wbeftoi_latency': (lambda x, y: x*1e9/y, ['wbeftoi_occupancy', 'weftoi_inserts']),
+            'wbeftoi_latency': (lambda x, y: x*1e9/y if y else float('nan'), ['wbeftoi_occupancy', 'weftoi_inserts']),
             'wbmtoi_occupancy': (lambda x: x/self.cha_freq, ['wbmtoi_occ_agg']),
-            'wbmtoi_latency': (lambda x, y: x*1e9/y, ['wbmtoi_occupancy', 'wbmtoi_inserts']),
+            'wbmtoi_latency': (lambda x, y: x*1e9/y if y else float('nan'), ['wbmtoi_occupancy', 'wbmtoi_inserts']),
             'pwbmtoi_occupancy': (lambda x: x/self.cha_freq, ['pwbmtoi_occ_agg']),
             'pwbmtoi_latency': (lambda x, y: x*1e9/(y+0.0000000000005), ['pwbmtoi_occupancy', 'pwbmtoi_inserts']),
             'itom_occupancy': (lambda x: x/self.cha_freq, ['itom_occ_agg']),
@@ -227,7 +227,9 @@ class StatStore:
         self.d['fio_xput'] = {}
         for i in range(self.max_ssds):
             if os.path.exists(os.path.join(self.fio_stats_path, '%s.fio%d.txt'%(config, i))):
-                self.d['fio_xput']['SSD%d'%(i)] = [float(subprocess.check_output(['./collect_fio.sh', config, str(io_size), str(i)]))]
+                root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+                collector = os.path.join(root_dir, 'collect_fio.sh')
+                self.d['fio_xput']['SSD%d'%(i)] = [float(subprocess.check_output([collector, config, str(io_size), str(i), self.fio_stats_path]))]
 
     def compute_metric(self, metric):
         if not metric in self.derived_metrics:
@@ -296,14 +298,17 @@ class StatStore:
         for sfile in stream_files:
             core_idx = int(re.match('.*-core(\d+)$', sfile)[1])
             space_unit = 'CORE%d' % (core_idx)
-            if not space_unit in self.d[label]:
-                self.d[label][space_unit] = []
+            samples = []
             with open(sfile, 'r') as f:
                 for line in f:
-                    if not 'throughput summary:' in line:
+                    if 'throughput summary:' in line:
+                        samples.append(float(line.split()[2]))
                         continue
-                    cols = line.split()
-                    self.d[label][space_unit].append(float(cols[2]))
+                    match = re.search(r'([0-9.]+) requests per second', line)
+                    if match:
+                        samples.append(float(match.group(1)))
+            if samples:
+                self.d[label][space_unit] = samples
 
     def load_gapbs(self, filepath):
         with open(filepath, 'r') as f:

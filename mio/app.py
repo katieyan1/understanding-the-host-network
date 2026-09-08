@@ -8,7 +8,9 @@ from .stream import *
 from .redis import *
 from .gapbs import *
 
+import glob
 import os, time
+import subprocess
 import argparse
 import atexit
 
@@ -46,6 +48,10 @@ events_group_18 = {'itom_occ_agg': 'cha/config=0x0000000000403436,config2=0x4903
 events_group_19 = {'blemon_occ_agg': 'cha/config=0x0000000000403436,config2=0x43033', 'blemon_inserts': 'cha/config=0x0000000000403435,config2=0x43033'}
 events_group_23 = {'rdcur_occ_agg': 'cha/config=0x0000000000402436,config2=0x43c33', 'rdcur_inserts': 'cha/config=0x0000000000402435,config2=0x43c33'}
 events_group_24 = {'pwbmtoi_occ_agg': 'cha/config=0x0000000000403436,config2=0x48833', 'pwbmtoi_inserts': 'cha/config=0x0000000000403435,config2=0x48833'}
+
+# Ice Lake encodes the CHA TOR filters in the event configuration itself.
+# This local-memory DRd encoding comes from the repository's Ice Lake branch.
+events_group_15_icelake = {'drd_occ_agg': 'cha/config=0x00c8168600400136', 'drd_inserts': 'cha/config=0x00c8168600400135'}
 
 # Events for PFillWPQ
 events_group_20 = {'wpq_occ_gte34': 'imc/config=0x22400081', 'wpq_occ_gte30': 'imc/config=0x1e400081', 'wpq_occ_gte32': 'imc/config=0x20400081', 'wpq_occ_gte36': 'imc/config=0x24400081'}
@@ -94,7 +100,8 @@ def run_benchmark(args, env):
     if args.ant and args.fio and args.sync_durations and args.ant_duration + 2*(ANT_WARMUP_DURATION-FIO_PRESTART_DURATION) <= WARMUP_DURATION + RECORD_DURATION*RECORD_GROUPS:
         raise Exception('Duration too small for measuring all stats')
     
-    os.system('rm ' + os.path.join(env.get_stats_path(), '%s.*'%(prefix)))
+    for old_path in glob.glob(os.path.join(env.get_stats_path(), '%s.*' % prefix)):
+        os.remove(old_path)
 
     print('Running %s-cores%d'%(prefix, num_cores))
 
@@ -234,30 +241,33 @@ def run_benchmark(args, env):
         pcm_latency = PcmLatencyRunner(env.get_pcm_path())
         pcm_latency.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-latency.txt'%(prefix, num_cores)), RECORD_DURATION)
         pcm_raw = PcmRawRunner(env.get_pcm_path())
-        # pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-lfb.txt'%(prefix, num_cores)), events_group_0, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha.txt'%(prefix, num_cores)), events_group_7, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha2.txt'%(prefix, num_cores)), events_group_15, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha3.txt'%(prefix, num_cores)), events_group_16, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha4.txt'%(prefix, num_cores)), events_group_17, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha5.txt'%(prefix, num_cores)), events_group_18, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha6.txt'%(prefix, num_cores)), events_group_19, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha7.txt'%(prefix, num_cores)), events_group_23, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha8.txt'%(prefix, num_cores)), events_group_24, RECORD_DURATION)
-        #pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-l1.txt'%(prefix, num_cores)), events_group_1, RECORD_DURATION)
-        #pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-l2l3.txt'%(prefix, num_cores)), events_group_2, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-imc.txt'%(prefix, num_cores)), events_group_3, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-wpq.txt'%(prefix, num_cores)), events_group_20, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-rpq.txt'%(prefix, num_cores)), events_group_21, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-rpq2.txt'%(prefix, num_cores)), events_group_22, RECORD_DURATION)
-        # Following only for CascadeLake. (comment out for IceLake)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-modes.txt'%(prefix, num_cores)), events_group_4, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cas.txt'%(prefix, num_cores)), events_group_5, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-pre.txt'%(prefix, num_cores)), events_group_6, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-irp.txt'%(prefix, num_cores)), events_group_8, RECORD_DURATION)
-        pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-irp2.txt'%(prefix, num_cores)), events_group_9, RECORD_DURATION)
-        # pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-mesh1.txt'%(prefix, num_cores)), events_group_12, RECORD_DURATION)
-        # pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-mesh2.txt'%(prefix, num_cores)), events_group_13, RECORD_DURATION)
-        # pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-mesh3.txt'%(prefix, num_cores)), events_group_14, RECORD_DURATION)
+        if env.get_arch() == 'icelake':
+            # Collect the validated local-memory DRd pair and IMC occupancy.
+            # The Cascade Lake P2M filters below use a different encoding and
+            # must not be interpreted as Ice Lake transaction measurements.
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha2.txt'%(prefix, num_cores)), events_group_15_icelake, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-imc.txt'%(prefix, num_cores)), events_group_3, RECORD_DURATION)
+        elif env.get_arch() == 'cascadelake':
+            # pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-lfb.txt'%(prefix, num_cores)), events_group_0, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha.txt'%(prefix, num_cores)), events_group_7, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha2.txt'%(prefix, num_cores)), events_group_15, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha3.txt'%(prefix, num_cores)), events_group_16, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha4.txt'%(prefix, num_cores)), events_group_17, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha5.txt'%(prefix, num_cores)), events_group_18, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha6.txt'%(prefix, num_cores)), events_group_19, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha7.txt'%(prefix, num_cores)), events_group_23, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha8.txt'%(prefix, num_cores)), events_group_24, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-imc.txt'%(prefix, num_cores)), events_group_3, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-wpq.txt'%(prefix, num_cores)), events_group_20, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-rpq.txt'%(prefix, num_cores)), events_group_21, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-rpq2.txt'%(prefix, num_cores)), events_group_22, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-modes.txt'%(prefix, num_cores)), events_group_4, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cas.txt'%(prefix, num_cores)), events_group_5, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-pre.txt'%(prefix, num_cores)), events_group_6, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-irp.txt'%(prefix, num_cores)), events_group_8, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-irp2.txt'%(prefix, num_cores)), events_group_9, RECORD_DURATION)
+        else:
+            raise Exception('Unsupported architecture profile: %s' % env.get_arch())
     elif args.stats_membw:
         pcm_mem = PcmMemoryRunner(env.get_pcm_path())
         time.sleep(WARMUP_DURATION)
@@ -301,14 +311,12 @@ def run_benchmark(args, env):
         ant2.wait()
 
 def cleanup():
-    # TODO: Hacky
-    os.system('pkill -9 -f pcm')
-    os.system('pkill -9 -f mlc')
-    #os.system('pkill -9 -f fio')
-    os.system('pkill -9 -f stream')
-    os.system('pkill -9 -f redis-server')
-    os.system('pkill -9 -f mmapbench')
-    os.system('pkill -9 -f sar')
+    # Use exact executable names so workload names in the parent mio command
+    # line do not cause pkill to terminate mio itself.
+    for process_name in ('pcm-memory', 'pcm-latency', 'pcm-raw', 'mlc',
+                         'stream', 'redis-server', 'mmapbench', 'sar'):
+        subprocess.run(['pkill', '-9', '-x', process_name], check=False,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
 
@@ -388,4 +396,3 @@ def main(argv=[]):
     for x in x_ncores:
         args.ant_num_cores = x
         run_benchmark(args, env)
-

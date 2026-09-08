@@ -11,11 +11,13 @@ export VENDOR_ID=$(lscpu | grep 'Vendor ID' | egrep -o '[^ ]*$')
 export MODEL_NAME=$(lscpu | grep 'Model name' | sed -n 's/Model name:\s*\(.*\)$/\1/p')
 
 SCALING_DRIVER=
-SCALING_GOVERNOR=
+SCALING_GOVERNORS=()
 NO_TURBO_FILE=
 if [[ -z "${in_vm}" ]]; then
 	SCALING_DRIVER=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_driver)
-	SCALING_GOVERNOR=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor)
+	for governor_file in /sys/devices/system/cpu/cpufreq/policy*/scaling_governor; do
+		[[ -e "$governor_file" ]] && SCALING_GOVERNORS+=("$governor_file")
+	done
 	NO_TURBO_FILE="/sys/devices/system/cpu/intel_pstate/no_turbo"
 fi
 
@@ -108,22 +110,23 @@ function check_no_turbo {
 }
 
 lscpu | grep -E '^(Hypervisor vendor:|Virtualization type:)' --color=never || :
-echo "Driver: $SCALING_DRIVER, governor: $SCALING_GOVERNOR" 
+echo "Driver: $SCALING_DRIVER"
 echo -e "Vendor ID: $VENDOR_ID\nModel name: $MODEL_NAME"
 
 ############### Adjust the scaling governor to 'performance' to avoid sub-nominal clocking ##########
 
-if [[ -n "$SCALING_GOVERNOR" ]] && [[ "$SCALING_GOVERNOR" != "performance" ]]; then
-	original_governor=$SCALING_GOVERNOR
-	echo -n "Changing scaling_governor to performance: "
-	if ! sudo -n true 2>/dev/null; then echo ""; fi # write a newline if we are about to prompt for sudo
-	sudo sh -c "echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
-	if [[ $(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor) == "performance" ]]; then
-		echo "SUCCESS";
-	else
-		echo "FAILED";
+for governor_file in "${SCALING_GOVERNORS[@]}"; do
+	if [[ $(cat "$governor_file") != "performance" ]]; then
+		echo -n "Changing $governor_file to performance: "
+		if ! sudo -n true 2>/dev/null; then echo ""; fi
+		sudo sh -c "echo performance > '$governor_file'"
 	fi
-fi
+	if [[ $(cat "$governor_file") == "performance" ]]; then
+		echo "$governor_file: performance"
+	else
+		echo "$governor_file: FAILED"
+	fi
+done
 
 ################# Disable turbo boost (Intel only) #######################
 if [ ${VENDOR_ID}x == "GenuineIntelx" ]; then check_no_turbo; fi

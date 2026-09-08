@@ -1,4 +1,3 @@
-from distutils.command.config import config
 import json
 import os
 
@@ -18,6 +17,10 @@ class Environment:
         self.gapbs_path = None
         self.ssds = None
         self.mem_channels = None
+        self.arch = None
+
+        if 'ARCH' in config_dict:
+            self.arch = config_dict['ARCH'].lower()
 
         if 'MLC_PATH' in config_dict:
             self.mlc_path = config_dict['MLC_PATH']
@@ -77,10 +80,6 @@ class Environment:
 
         if 'IMC_FREQ' in config_dict:
             self.imc_freq = config_dict['IMC_FREQ']
-
-
-        if os.system('modprobe msr') != 0:
-            raise Exception('Failed to load msr kernel module')
 
 
     def get_mlc_path(self):
@@ -155,6 +154,11 @@ class Environment:
     def get_num_numa(self):
         return len(self.numa_cores)
 
+    def get_arch(self):
+        if not self.arch:
+            raise Exception('ARCH not defined in config')
+        return self.arch
+
     def get_cores_in_numa(self, i):
         return self.numa_cores[i]
 
@@ -170,7 +174,7 @@ class Environment:
         if not self.mem_channels:
             raise Exception('MEM_CHANNELS config not found')
         return self.mem_channels
-    
+
     def get_chas(self):
         if not self.chas:
             raise Exception('CHAS config not found')
@@ -180,14 +184,13 @@ class Environment:
         if not self.irps:
             raise Exception('IRPS config not found')
         return self.irps
-    
+
     def get_cha_freq(self):
         if not self.cha_freq:
             raise Exception('CHA_FREQ config not found')
         return self.cha_freq
-    
+
     def get_imc_freq(self):
         if not self.imc_freq:
             raise Exception('IMC_FREQ config not found')
         return self.imc_freq
-    

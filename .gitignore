@@ -128,5 +128,9 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Host-local experiment dependencies and output
+.deps/
+.experiment-data/
+
 # Pyre type checker
 .pyre/
