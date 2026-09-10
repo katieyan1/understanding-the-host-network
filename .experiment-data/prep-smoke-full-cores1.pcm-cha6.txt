@@ -1,0 +1,53 @@
+
+ Intel(r) Performance Counter Monitor: Raw Event Monitoring Utility 
+
+
+=====  Processor information  =====
+Linux arch_perfmon flag  : yes
+Hybrid processor         : no
+IBRS and IBPB supported  : yes
+STIBP supported          : yes
+Spec arch caps supported : yes
+Max CPUID level          : 27
+CPU model number         : 106
+Number of physical cores: 16
+Number of logical cores: 32
+Number of online logical cores: 32
+Threads (logical cores) per physical core: 2
+Num sockets: 1
+Physical cores per socket: 16
+Last level cache slices per socket: 16
+Core PMU (perfmon) version: 5
+Number of core PMU generic (programmable) counters: 8
+Width of generic (programmable) counters: 48 bits
+Number of core PMU fixed counters: 4
+Width of fixed counters: 48 bits
+Nominal core frequency: 2400000000 Hz
+IBRS enabled in the kernel   : yes
+STIBP enabled in the kernel  : no
+The processor is not susceptible to Rogue Data Cache Load: yes
+The processor supports enhanced IBRS                     : yes
+Package thermal spec power: 135 Watt; Package minimum power: 72 Watt; Package maximum power: 557 Watt;
+
+INFO: Linux perf interface to program uncore PMUs is present
+Socket 0: 4 memory controllers detected with total number of 8 channels. 0 UPI ports detected. 4 M2M (mesh to memory) blocks detected. 0 HBM M2M blocks detected. 0 EDC/HBM channels detected. 0 Home Agents detected. 0 M3UPI blocks detected.
+Socket 0: 1 PCU units detected. 6 IIO units detected. 6 IRP units detected. 16 CHA/CBO units detected. 0 MDF units detected. 1 UBOX units detected. 0 CXL units detected.
+Initializing RMIDs
+
+parsed  cha event: "blemon_occ_agg" : {0x403436, 0x0, 0x43033, 0x0, 0x0, 0x0}
+parsed  cha event: "blemon_inserts" : {0x403435, 0x0, 0x43033, 0x0, 0x0, 0x0}
+
+Detected Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz "Intel(r) microarchitecture codename Icelake-SP" stepping 6 microcode level 0xd000421
+Collecting 1 event group(s)
+Update every 1 seconds
+,,,SKT0C0,SKT0C0,SKT0C1,SKT0C1,SKT0C2,SKT0C2,SKT0C3,SKT0C3,SKT0C4,SKT0C4,SKT0C5,SKT0C5,SKT0C6,SKT0C6,SKT0C7,SKT0C7,SKT0C8,SKT0C8,SKT0C9,SKT0C9,SKT0C10,SKT0C10,SKT0C11,SKT0C11,SKT0C12,SKT0C12,SKT0C13,SKT0C13,SKT0C14,SKT0C14,SKT0C15,SKT0C15,
+Date,Time,ms,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,blemon_occ_agg,blemon_inserts,
+2026-09-07,21:49:08.449,1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+2026-09-07,21:49:09.449,999,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+2026-09-07,21:49:10.449,999,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+2026-09-07,21:49:11.450,1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+DEBUG: caught signal to interrupt (Terminated).
+Cleaning up
+ Closed perf event handles
+ Zeroed uncore PMU registers
+ Freeing up all RMIDs

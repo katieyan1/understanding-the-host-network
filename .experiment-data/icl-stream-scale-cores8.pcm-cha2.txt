@@ -1,0 +1,53 @@
+
+ Intel(r) Performance Counter Monitor: Raw Event Monitoring Utility 
+
+
+=====  Processor information  =====
+Linux arch_perfmon flag  : yes
+Hybrid processor         : no
+IBRS and IBPB supported  : yes
+STIBP supported          : yes
+Spec arch caps supported : yes
+Max CPUID level          : 27
+CPU model number         : 106
+Number of physical cores: 16
+Number of logical cores: 32
+Number of online logical cores: 32
+Threads (logical cores) per physical core: 2
+Num sockets: 1
+Physical cores per socket: 16
+Last level cache slices per socket: 16
+Core PMU (perfmon) version: 5
+Number of core PMU generic (programmable) counters: 8
+Width of generic (programmable) counters: 48 bits
+Number of core PMU fixed counters: 4
+Width of fixed counters: 48 bits
+Nominal core frequency: 2400000000 Hz
+IBRS enabled in the kernel   : yes
+STIBP enabled in the kernel  : no
+The processor is not susceptible to Rogue Data Cache Load: yes
+The processor supports enhanced IBRS                     : yes
+Package thermal spec power: 135 Watt; Package minimum power: 72 Watt; Package maximum power: 557 Watt;
+
+INFO: Linux perf interface to program uncore PMUs is present
+Socket 0: 4 memory controllers detected with total number of 8 channels. 0 UPI ports detected. 4 M2M (mesh to memory) blocks detected. 0 HBM M2M blocks detected. 0 EDC/HBM channels detected. 0 Home Agents detected. 0 M3UPI blocks detected.
+Socket 0: 1 PCU units detected. 6 IIO units detected. 6 IRP units detected. 16 CHA/CBO units detected. 0 MDF units detected. 1 UBOX units detected. 0 CXL units detected.
+Initializing RMIDs
+
+parsed  cha event: "drd_occ_agg" : {0xc8168600400136, 0x0, 0x0, 0x0, 0x0, 0x0}
+parsed  cha event: "drd_inserts" : {0xc8168600400135, 0x0, 0x0, 0x0, 0x0, 0x0}
+
+Detected Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz "Intel(r) microarchitecture codename Icelake-SP" stepping 6 microcode level 0xd000421
+Collecting 1 event group(s)
+Update every 1 seconds
+,,,SKT0C0,SKT0C0,SKT0C1,SKT0C1,SKT0C2,SKT0C2,SKT0C3,SKT0C3,SKT0C4,SKT0C4,SKT0C5,SKT0C5,SKT0C6,SKT0C6,SKT0C7,SKT0C7,SKT0C8,SKT0C8,SKT0C9,SKT0C9,SKT0C10,SKT0C10,SKT0C11,SKT0C11,SKT0C12,SKT0C12,SKT0C13,SKT0C13,SKT0C14,SKT0C14,SKT0C15,SKT0C15,
+Date,Time,ms,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,
+2026-09-08,17:59:35.073,1000,7661471432,93899790,7716755717,93899780,8187300541,93900284,7363255163,93899840,7932124834,93899601,7294471396,93899686,7182232552,93898352,8001493711,93898721,7936779106,93897903,7347193305,93898504,7640593681,93898783,7482220101,93898966,7841966475,93899383,7235946129,93899330,7272789780,93899190,7726160676,93898926,
+2026-09-08,17:59:36.073,999,7653961584,93809617,7709629204,93810594,8179112967,93811000,7355579294,93810728,7924595379,93809992,7287452736,93810321,7175602439,93808951,7994065692,93810164,7929346720,93809396,7340222162,93810546,7632771449,93810822,7475295706,93810530,7834106687,93811613,7228662360,93811404,7266047970,93811926,7718427991,93810377,
+2026-09-08,17:59:37.073,999,7650455531,93773371,7706009184,93773266,8175962261,93773960,7353309820,93773804,7921426516,93773544,7283734686,93773638,7172662541,93771837,7990588442,93773132,7925888925,93772955,7337020171,93773589,7630281545,93774101,7471838166,93773820,7831278799,93774752,7225570863,93775130,7263026943,93775020,7715462612,93774115,
+2026-09-08,17:59:38.074,1000,7661793771,93909147,7717186052,93909013,8188119919,93909285,7363385072,93909761,7932583704,93909740,7294283568,93909527,7182687982,93908357,8002243060,93909340,7937493413,93909717,7348170173,93909326,7641263648,93910210,7483299185,93910126,7842256690,93911005,7236465908,93910908,7273907869,93911503,7726574989,93910652,
+DEBUG: caught signal to interrupt (Terminated).
+Cleaning up
+ Closed perf event handles
+ Zeroed uncore PMU registers
+ Freeing up all RMIDs

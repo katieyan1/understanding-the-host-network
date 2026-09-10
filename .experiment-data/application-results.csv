@@ -1,0 +1,8 @@
+workload,allocated_cores,server_instances,metric,value,dram_read_MBps,dram_write_MBps
+gapbs_pr,1,,seconds_per_trial,37.77811333333333,6746.205000000001,40.092499999999994
+gapbs_pr,2,,seconds_per_trial,19.13018166666667,13406.7275,72.415
+gapbs_pr,4,,seconds_per_trial,9.709151666666667,25881.280000000002,126.5775
+gapbs_pr,8,,seconds_per_trial,4.995700416666668,48071.285,303.89
+redis_get,2,1,requests_per_second,1405047.0,241.73,23.9125
+redis_get,4,2,requests_per_second,2662079.12,549.7,34.345
+redis_get,6,3,requests_per_second,3840250.12,867.4475,50.24249999999999

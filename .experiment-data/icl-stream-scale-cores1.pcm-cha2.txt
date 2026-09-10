@@ -1,0 +1,53 @@
+
+ Intel(r) Performance Counter Monitor: Raw Event Monitoring Utility 
+
+
+=====  Processor information  =====
+Linux arch_perfmon flag  : yes
+Hybrid processor         : no
+IBRS and IBPB supported  : yes
+STIBP supported          : yes
+Spec arch caps supported : yes
+Max CPUID level          : 27
+CPU model number         : 106
+Number of physical cores: 16
+Number of logical cores: 32
+Number of online logical cores: 32
+Threads (logical cores) per physical core: 2
+Num sockets: 1
+Physical cores per socket: 16
+Last level cache slices per socket: 16
+Core PMU (perfmon) version: 5
+Number of core PMU generic (programmable) counters: 8
+Width of generic (programmable) counters: 48 bits
+Number of core PMU fixed counters: 4
+Width of fixed counters: 48 bits
+Nominal core frequency: 2400000000 Hz
+IBRS enabled in the kernel   : yes
+STIBP enabled in the kernel  : no
+The processor is not susceptible to Rogue Data Cache Load: yes
+The processor supports enhanced IBRS                     : yes
+Package thermal spec power: 135 Watt; Package minimum power: 72 Watt; Package maximum power: 557 Watt;
+
+INFO: Linux perf interface to program uncore PMUs is present
+Socket 0: 4 memory controllers detected with total number of 8 channels. 0 UPI ports detected. 4 M2M (mesh to memory) blocks detected. 0 HBM M2M blocks detected. 0 EDC/HBM channels detected. 0 Home Agents detected. 0 M3UPI blocks detected.
+Socket 0: 1 PCU units detected. 6 IIO units detected. 6 IRP units detected. 16 CHA/CBO units detected. 0 MDF units detected. 1 UBOX units detected. 0 CXL units detected.
+Initializing RMIDs
+
+parsed  cha event: "drd_occ_agg" : {0xc8168600400136, 0x0, 0x0, 0x0, 0x0, 0x0}
+parsed  cha event: "drd_inserts" : {0xc8168600400135, 0x0, 0x0, 0x0, 0x0, 0x0}
+
+Detected Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz "Intel(r) microarchitecture codename Icelake-SP" stepping 6 microcode level 0xd000421
+Collecting 1 event group(s)
+Update every 1 seconds
+,,,SKT0C0,SKT0C0,SKT0C1,SKT0C1,SKT0C2,SKT0C2,SKT0C3,SKT0C3,SKT0C4,SKT0C4,SKT0C5,SKT0C5,SKT0C6,SKT0C6,SKT0C7,SKT0C7,SKT0C8,SKT0C8,SKT0C9,SKT0C9,SKT0C10,SKT0C10,SKT0C11,SKT0C11,SKT0C12,SKT0C12,SKT0C13,SKT0C13,SKT0C14,SKT0C14,SKT0C15,SKT0C15,
+Date,Time,ms,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,drd_occ_agg,drd_inserts,
+2026-09-08,17:53:32.317,1032,1221535341,15910014,1196888980,15909980,1253115385,15911241,885199793,15910895,1038776572,15908382,1149275568,15910407,1147051541,15909100,1273318574,15908949,1254857154,15908662,1163025129,15908696,1192962136,15908321,1126134079,15909917,1214530094,15911501,939433530,15910154,1148627357,15911367,1150425904,15911956,
+2026-09-08,17:53:33.318,1000,1220545562,15897395,1195867576,15897252,1252064819,15898269,884481324,15898046,1037730004,15895869,1147782128,15897274,1145930230,15895553,1271990983,15895625,1253822626,15895658,1162035574,15895882,1191952298,15895296,1125159680,15896616,1213406095,15898178,938103024,15897909,1147469039,15898133,1149481328,15898495,
+2026-09-08,17:53:34.318,999,1219774992,15887829,1195308050,15888141,1251289137,15889106,883991385,15889347,1037287926,15886581,1147448376,15889261,1145350131,15886468,1271305541,15886432,1253084870,15886657,1161300884,15886762,1191232345,15886036,1124518444,15888044,1212788057,15889257,937857065,15888955,1146750309,15889629,1148755227,15889191,
+2026-09-08,17:53:35.318,999,1220872776,15901326,1196532285,15901068,1252487754,15903580,884925702,15902647,1039010533,15900606,1149193406,15902334,1146997300,15900781,1272932789,15901136,1254207680,15899924,1162846210,15901458,1192344805,15900134,1125589114,15901914,1214396167,15902631,939463041,15902781,1148358305,15902731,1149788877,15903028,
+DEBUG: caught signal to interrupt (Terminated).
+Cleaning up
+ Closed perf event handles
+ Zeroed uncore PMU registers
+ Freeing up all RMIDs

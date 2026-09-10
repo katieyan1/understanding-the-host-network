@@ -1,0 +1,8 @@
+42533:C 08 Sep 2026 18:39:24.749 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+42533:C 08 Sep 2026 18:39:24.749 # Redis version=6.0.16, bits=64, commit=00000000, modified=0, pid=42533, just started
+42533:C 08 Sep 2026 18:39:24.749 # Configuration loaded
+42533:M 08 Sep 2026 18:39:24.750 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+42533:M 08 Sep 2026 18:39:24.750 * Running mode=standalone, port=0.
+42533:M 08 Sep 2026 18:39:24.750 # Server initialized
+42533:M 08 Sep 2026 18:39:24.750 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+42533:M 08 Sep 2026 18:39:24.751 * The server is now ready to accept connections at /tmp/redis.sock5
