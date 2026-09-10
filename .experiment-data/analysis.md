@@ -17,6 +17,8 @@ Raw logs and the generated `stream-fio-results.csv` and
 | 8 | 96.137 | 5.81x | 72.6% | 59.58 | 100.165 | 2.174 | 33.78 |
 | 12 | 123.240 | 7.44x | 62.0% | 70.27 | 125.859 | 3.864 | 36.09 |
 
+![STREAM core-scaling graphs](figures/stream-core-scaling.svg)
+
 Bandwidth continues to increase through twelve cores, but efficiency declines as
 the memory system approaches saturation. From one to twelve cores, L1 miss
 latency rises 66.0%, mean RPQ occupancy rises from 0.131 to 3.864 entries per
@@ -36,6 +38,8 @@ fio baseline was 28.086 GB/s.
 | 4 | 56.704 | 47.566 | 16.12% | 28.115 | +0.10% | 49.86 | 60.22 |
 | 8 | 96.137 | 78.203 | 18.65% | 28.103 | +0.06% | 59.58 | 74.13 |
 | 12 | 123.240 | 95.600 | 22.43% | 28.105 | +0.07% | 70.27 | 91.47 |
+
+![STREAM and four-NVMe colocation graphs](figures/stream-fio-colocation.svg)
 
 The observed interference is asymmetric. fio retains its isolated throughput
 within 0.10%, while STREAM loses progressively more throughput as its core count
@@ -60,6 +64,8 @@ giving 3, 6, 12, and 24 timing observations.
 | 4 | 9.709 | 3.89x | 97.3% | 25.881 |
 | 8 | 4.996 | 7.56x | 94.5% | 48.071 |
 
+![GAPBS PageRank scaling graphs](figures/gapbs-pagerank-scaling.svg)
+
 PageRank scales very well through eight cores. Its 94.5% eight-core efficiency
 and sub-50 GB/s DRAM rate show that this sweep has not yet reached the socket's
 STREAM bandwidth ceiling.
@@ -74,6 +80,8 @@ pipelined GET operations. One server core was paired with one client core.
 | 2 | 1 | 1,405,047 | 1.00x | 100.0% | 0.242 |
 | 4 | 2 | 2,662,079 | 1.89x | 94.7% | 0.550 |
 | 6 | 3 | 3,840,250 | 2.73x | 91.1% | 0.867 |
+
+![Redis GET scaling graphs](figures/redis-get-scaling.svg)
 
 Redis also scales well, with a modest fall in efficiency as instances compete
 for shared resources. Redis emitted its standard `overcommit_memory=0` warning,
