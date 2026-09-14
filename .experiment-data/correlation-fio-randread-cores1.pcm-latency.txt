@@ -49,84 +49,1293 @@ L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
 Socket0 Thread0     Socket0 Thread1     
 -----------------------------------------------------------------------------
-Core0: 28.87        Core16: 33.29        
-Core1: 34.08        Core17: 35.25        
-Core2: 30.09        Core18: 31.16        
-Core3: 34.37        Core19: 33.57        
-Core4: 10.07        Core20: 25.17        
-Core5: 33.80        Core21: 31.91        
-Core6: 21.89        Core22: 29.17        
-Core7: 28.69        Core23: 32.60        
-Core8: 21.56        Core24: 32.95        
-Core9: 30.20        Core25: 34.62        
-Core10: 35.07        Core26: 34.17        
-Core11: 30.64        Core27: 25.86        
-Core12: 29.17        Core28: 17.30        
-Core13: 25.33        Core29: 30.54        
-Core14: 26.75        Core30: 27.76        
-Core15: 38.89        Core31: 35.60        
+Core0: 32.01        Core16: 25.81        
+Core1: 31.80        Core17: 35.97        
+Core2: 31.46        Core18: 32.93        
+Core3: 28.58        Core19: 21.18        
+Core4: 9.79        Core20: 20.73        
+Core5: 27.26        Core21: 33.71        
+Core6: 29.29        Core22: 28.55        
+Core7: 32.22        Core23: 32.11        
+Core8: 31.62        Core24: 32.88        
+Core9: 34.43        Core25: 36.05        
+Core10: 18.36        Core26: 26.48        
+Core11: 28.89        Core27: 32.50        
+Core12: 21.17        Core28: 33.48        
+Core13: 37.29        Core29: 37.45        
+Core14: 28.48        Core30: 38.25        
+Core15: 28.66        Core31: 37.67        
 
 Average latency per socket
 
 L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
-Socket0: 10.85
+Socket0: 10.44
 
 DDR read Latency(ns)
-Socket0: 16.81
+Socket0: 17.89
 
 
 L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
 Socket0 Thread0     Socket0 Thread1     
 -----------------------------------------------------------------------------
-Core0: 30.24        Core16: 35.02        
-Core1: 33.55        Core17: 34.20        
-Core2: 37.26        Core18: 29.25        
-Core3: 37.15        Core19: 28.87        
-Core4: 9.76        Core20: 23.93        
-Core5: 36.25        Core21: 28.47        
-Core6: 36.69        Core22: 30.32        
-Core7: 23.41        Core23: 30.92        
-Core8: 34.38        Core24: 31.45        
-Core9: 31.67        Core25: 33.51        
-Core10: 34.13        Core26: 30.67        
-Core11: 28.14        Core27: 26.34        
-Core12: 30.58        Core28: 18.20        
-Core13: 26.55        Core29: 31.46        
-Core14: 27.79        Core30: 27.60        
-Core15: 37.88        Core31: 35.72        
+Core0: 31.74        Core16: 27.25        
+Core1: 32.67        Core17: 38.12        
+Core2: 39.40        Core18: 30.79        
+Core3: 27.08        Core19: 25.61        
+Core4: 9.30        Core20: 21.89        
+Core5: 27.71        Core21: 35.26        
+Core6: 34.02        Core22: 34.04        
+Core7: 32.76        Core23: 36.26        
+Core8: 32.99        Core24: 33.20        
+Core9: 35.06        Core25: 32.28        
+Core10: 19.24        Core26: 29.23        
+Core11: 33.22        Core27: 33.38        
+Core12: 35.11        Core28: 27.61        
+Core13: 41.52        Core29: 33.51        
+Core14: 31.01        Core30: 35.66        
+Core15: 30.61        Core31: 36.84        
 
 Average latency per socket
 
 L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
-Socket0: 10.51
+Socket0: 9.97
 
 DDR read Latency(ns)
-Socket0: 16.91
+Socket0: 17.86
 
 
 L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
 Socket0 Thread0     Socket0 Thread1     
 -----------------------------------------------------------------------------
-Core0: 25.75        Core16: 35.88        
-Core1: 36.90        Core17: 37.26        
-Core2: 31.28        Core18: 28.67        
-Core3: 36.34        Core19: 30.52        
-Core4: 9.56        Core20: 23.77        
-Core5: 36.30        Core21: 30.16        
-Core6: 31.09        Core22: 29.01        
-Core7: 24.35        Core23: 32.37        
-Core8: 35.83        Core24: 29.94        
-Core9: 34.35        Core25: 32.17        
-Core10: 35.87        Core26: 33.49        
-Core11: 28.91        Core27: 26.60        
-Core12: 33.79        Core28: 18.21        
-Core13: 25.98        Core29: 31.44        
-Core14: 28.61        Core30: 28.76        
-Core15: 36.77        Core31: 35.80        
+Core0: 28.19        Core16: 27.61        
+Core1: 34.55        Core17: 39.04        
+Core2: 35.81        Core18: 30.31        
+Core3: 33.65        Core19: 22.05        
+Core4: 9.28        Core20: 21.03        
+Core5: 27.61        Core21: 36.85        
+Core6: 41.54        Core22: 31.61        
+Core7: 35.96        Core23: 35.81        
+Core8: 35.54        Core24: 34.12        
+Core9: 37.87        Core25: 33.46        
+Core10: 19.05        Core26: 32.19        
+Core11: 31.85        Core27: 32.68        
+Core12: 23.92        Core28: 32.20        
+Core13: 41.28        Core29: 38.57        
+Core14: 30.56        Core30: 38.17        
+Core15: 31.39        Core31: 36.75        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.90
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 34.89        Core16: 28.77        
+Core1: 34.91        Core17: 34.22        
+Core2: 35.26        Core18: 32.77        
+Core3: 33.27        Core19: 22.78        
+Core4: 9.45        Core20: 21.39        
+Core5: 26.60        Core21: 35.34        
+Core6: 22.84        Core22: 12.71        
+Core7: 35.27        Core23: 35.42        
+Core8: 35.74        Core24: 35.06        
+Core9: 38.43        Core25: 32.36        
+Core10: 19.33        Core26: 30.18        
+Core11: 32.94        Core27: 31.89        
+Core12: 35.02        Core28: 29.17        
+Core13: 40.12        Core29: 42.62        
+Core14: 28.85        Core30: 35.97        
+Core15: 30.71        Core31: 36.94        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.15
+
+DDR read Latency(ns)
+Socket0: 17.76
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 23.85        Core16: 28.33        
+Core1: 36.42        Core17: 38.90        
+Core2: 40.80        Core18: 32.76        
+Core3: 35.93        Core19: 22.58        
+Core4: 9.48        Core20: 22.21        
+Core5: 24.14        Core21: 33.96        
+Core6: 36.32        Core22: 32.14        
+Core7: 32.75        Core23: 34.53        
+Core8: 41.51        Core24: 35.68        
+Core9: 34.99        Core25: 40.38        
+Core10: 19.95        Core26: 37.37        
+Core11: 19.32        Core27: 33.48        
+Core12: 25.22        Core28: 44.24        
+Core13: 48.73        Core29: 41.03        
+Core14: 33.32        Core30: 42.47        
+Core15: 31.44        Core31: 37.91        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.24
+
+DDR read Latency(ns)
+Socket0: 17.83
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 24.10        Core16: 29.66        
+Core1: 38.91        Core17: 41.05        
+Core2: 38.24        Core18: 38.99        
+Core3: 33.69        Core19: 22.03        
+Core4: 9.46        Core20: 21.64        
+Core5: 24.08        Core21: 35.31        
+Core6: 25.05        Core22: 31.14        
+Core7: 39.68        Core23: 43.46        
+Core8: 33.06        Core24: 48.80        
+Core9: 38.23        Core25: 30.45        
+Core10: 19.19        Core26: 29.94        
+Core11: 32.19        Core27: 32.93        
+Core12: 29.04        Core28: 31.25        
+Core13: 43.19        Core29: 48.57        
+Core14: 34.53        Core30: 39.66        
+Core15: 30.79        Core31: 37.55        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.21
+
+DDR read Latency(ns)
+Socket0: 17.76
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 41.18        Core16: 28.42        
+Core1: 34.03        Core17: 38.05        
+Core2: 32.64        Core18: 33.87        
+Core3: 31.00        Core19: 21.95        
+Core4: 9.25        Core20: 21.70        
+Core5: 30.56        Core21: 35.97        
+Core6: 23.74        Core22: 30.60        
+Core7: 33.72        Core23: 33.78        
+Core8: 32.29        Core24: 32.49        
+Core9: 38.44        Core25: 33.76        
+Core10: 18.89        Core26: 28.77        
+Core11: 35.41        Core27: 33.28        
+Core12: 24.48        Core28: 25.79        
+Core13: 41.69        Core29: 38.03        
+Core14: 30.97        Core30: 40.56        
+Core15: 30.68        Core31: 36.61        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.88
+
+DDR read Latency(ns)
+Socket0: 17.77
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 24.59        Core16: 28.59        
+Core1: 34.56        Core17: 36.75        
+Core2: 39.44        Core18: 33.39        
+Core3: 32.18        Core19: 22.21        
+Core4: 9.32        Core20: 21.63        
+Core5: 32.10        Core21: 36.67        
+Core6: 25.38        Core22: 31.45        
+Core7: 35.96        Core23: 37.04        
+Core8: 36.86        Core24: 40.29        
+Core9: 38.12        Core25: 35.41        
+Core10: 19.02        Core26: 30.21        
+Core11: 32.10        Core27: 19.99        
+Core12: 35.82        Core28: 29.79        
+Core13: 41.41        Core29: 37.26        
+Core14: 32.84        Core30: 42.98        
+Core15: 31.12        Core31: 36.36        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.00
+
+DDR read Latency(ns)
+Socket0: 17.97
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.09        Core16: 28.25        
+Core1: 36.52        Core17: 38.81        
+Core2: 48.48        Core18: 35.44        
+Core3: 41.97        Core19: 30.62        
+Core4: 9.29        Core20: 20.46        
+Core5: 34.05        Core21: 35.64        
+Core6: 24.99        Core22: 31.48        
+Core7: 40.95        Core23: 36.73        
+Core8: 35.92        Core24: 42.84        
+Core9: 36.13        Core25: 33.05        
+Core10: 19.03        Core26: 31.92        
+Core11: 33.85        Core27: 36.38        
+Core12: 24.24        Core28: 29.28        
+Core13: 45.63        Core29: 41.88        
+Core14: 32.09        Core30: 52.96        
+Core15: 31.68        Core31: 37.01        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.97
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.18        Core16: 27.96        
+Core1: 39.48        Core17: 31.41        
+Core2: 40.46        Core18: 40.27        
+Core3: 34.85        Core19: 24.98        
+Core4: 9.35        Core20: 18.86        
+Core5: 34.42        Core21: 35.71        
+Core6: 25.16        Core22: 31.60        
+Core7: 37.21        Core23: 33.87        
+Core8: 35.24        Core24: 31.32        
+Core9: 37.97        Core25: 37.11        
+Core10: 19.20        Core26: 28.89        
+Core11: 32.44        Core27: 32.02        
+Core12: 33.18        Core28: 30.57        
+Core13: 40.84        Core29: 40.62        
+Core14: 33.11        Core30: 32.27        
+Core15: 31.19        Core31: 35.87        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.00
+
+DDR read Latency(ns)
+Socket0: 17.85
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 29.05        Core16: 28.05        
+Core1: 36.39        Core17: 36.54        
+Core2: 34.76        Core18: 29.81        
+Core3: 33.02        Core19: 23.36        
+Core4: 9.38        Core20: 23.14        
+Core5: 32.36        Core21: 36.95        
+Core6: 25.25        Core22: 30.77        
+Core7: 36.80        Core23: 34.52        
+Core8: 37.09        Core24: 44.16        
+Core9: 37.68        Core25: 32.54        
+Core10: 19.09        Core26: 30.17        
+Core11: 33.56        Core27: 32.82        
+Core12: 23.11        Core28: 31.22        
+Core13: 42.87        Core29: 38.30        
+Core14: 33.72        Core30: 33.05        
+Core15: 30.30        Core31: 36.16        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.02
+
+DDR read Latency(ns)
+Socket0: 17.80
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 24.34        Core16: 28.05        
+Core1: 36.68        Core17: 38.75        
+Core2: 34.90        Core18: 38.07        
+Core3: 32.64        Core19: 23.08        
+Core4: 9.24        Core20: 20.56        
+Core5: 34.50        Core21: 36.31        
+Core6: 25.38        Core22: 31.56        
+Core7: 31.75        Core23: 36.92        
+Core8: 33.79        Core24: 36.32        
+Core9: 36.41        Core25: 29.63        
+Core10: 19.07        Core26: 28.31        
+Core11: 32.42        Core27: 34.09        
+Core12: 34.98        Core28: 27.97        
+Core13: 40.12        Core29: 38.09        
+Core14: 30.35        Core30: 52.26        
+Core15: 30.81        Core31: 36.54        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.93
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 36.76        Core16: 29.10        
+Core1: 36.18        Core17: 35.25        
+Core2: 38.87        Core18: 38.47        
+Core3: 33.23        Core19: 22.71        
+Core4: 9.33        Core20: 20.63        
+Core5: 30.73        Core21: 35.87        
+Core6: 23.90        Core22: 30.58        
+Core7: 34.39        Core23: 33.75        
+Core8: 32.52        Core24: 29.42        
+Core9: 34.39        Core25: 32.53        
+Core10: 19.02        Core26: 33.85        
+Core11: 31.49        Core27: 32.41        
+Core12: 24.61        Core28: 26.50        
+Core13: 41.26        Core29: 34.73        
+Core14: 33.88        Core30: 38.37        
+Core15: 30.86        Core31: 35.07        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.93
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 42.32        Core16: 28.80        
+Core1: 37.82        Core17: 34.46        
+Core2: 39.46        Core18: 32.68        
+Core3: 32.14        Core19: 22.78        
+Core4: 9.36        Core20: 21.53        
+Core5: 34.10        Core21: 36.95        
+Core6: 24.19        Core22: 32.42        
+Core7: 33.79        Core23: 34.01        
+Core8: 32.51        Core24: 31.22        
+Core9: 33.67        Core25: 29.99        
+Core10: 18.90        Core26: 30.53        
+Core11: 30.79        Core27: 34.25        
+Core12: 25.58        Core28: 45.40        
+Core13: 42.40        Core29: 37.88        
+Core14: 31.52        Core30: 35.59        
+Core15: 30.96        Core31: 36.16        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.98
+
+DDR read Latency(ns)
+Socket0: 17.79
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 26.53        Core16: 28.37        
+Core1: 21.09        Core17: 37.80        
+Core2: 39.70        Core18: 32.01        
+Core3: 31.69        Core19: 23.19        
+Core4: 9.35        Core20: 20.39        
+Core5: 38.53        Core21: 37.33        
+Core6: 26.44        Core22: 36.47        
+Core7: 37.71        Core23: 38.99        
+Core8: 31.70        Core24: 30.27        
+Core9: 34.90        Core25: 32.52        
+Core10: 19.11        Core26: 29.52        
+Core11: 38.94        Core27: 33.62        
+Core12: 25.68        Core28: 29.43        
+Core13: 43.40        Core29: 44.00        
+Core14: 30.81        Core30: 51.23        
+Core15: 31.59        Core31: 37.81        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.99
+
+DDR read Latency(ns)
+Socket0: 17.79
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 28.86        Core16: 27.92        
+Core1: 43.83        Core17: 36.41        
+Core2: 35.47        Core18: 31.86        
+Core3: 32.86        Core19: 23.49        
+Core4: 9.32        Core20: 21.24        
+Core5: 33.09        Core21: 36.67        
+Core6: 23.75        Core22: 30.66        
+Core7: 33.64        Core23: 37.10        
+Core8: 37.10        Core24: 30.83        
+Core9: 37.82        Core25: 31.74        
+Core10: 19.04        Core26: 31.02        
+Core11: 32.37        Core27: 31.26        
+Core12: 35.63        Core28: 33.05        
+Core13: 39.94        Core29: 42.35        
+Core14: 30.15        Core30: 51.85        
+Core15: 31.59        Core31: 38.09        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.95
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 30.10        Core16: 26.50        
+Core1: 36.69        Core17: 39.15        
+Core2: 37.97        Core18: 38.99        
+Core3: 35.24        Core19: 27.66        
+Core4: 9.36        Core20: 22.55        
+Core5: 31.16        Core21: 35.24        
+Core6: 35.79        Core22: 32.00        
+Core7: 39.29        Core23: 40.86        
+Core8: 35.05        Core24: 41.30        
+Core9: 39.83        Core25: 34.02        
+Core10: 18.96        Core26: 28.25        
+Core11: 33.35        Core27: 33.09        
+Core12: 25.23        Core28: 32.89        
+Core13: 41.24        Core29: 40.48        
+Core14: 31.67        Core30: 39.28        
+Core15: 30.78        Core31: 37.08        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.07
+
+DDR read Latency(ns)
+Socket0: 17.77
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 26.78        Core16: 27.07        
+Core1: 38.63        Core17: 38.93        
+Core2: 38.30        Core18: 33.87        
+Core3: 31.72        Core19: 22.81        
+Core4: 9.35        Core20: 21.24        
+Core5: 29.27        Core21: 35.43        
+Core6: 36.05        Core22: 31.25        
+Core7: 34.41        Core23: 33.12        
+Core8: 33.76        Core24: 29.49        
+Core9: 37.31        Core25: 38.32        
+Core10: 18.70        Core26: 30.10        
+Core11: 31.42        Core27: 19.60        
+Core12: 34.26        Core28: 49.19        
+Core13: 41.57        Core29: 37.82        
+Core14: 34.84        Core30: 37.43        
+Core15: 31.35        Core31: 36.19        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.99
+
+DDR read Latency(ns)
+Socket0: 17.93
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 26.14        Core16: 27.00        
+Core1: 33.31        Core17: 37.86        
+Core2: 41.84        Core18: 34.30        
+Core3: 33.33        Core19: 23.51        
+Core4: 9.38        Core20: 22.05        
+Core5: 30.17        Core21: 35.24        
+Core6: 23.63        Core22: 30.25        
+Core7: 35.77        Core23: 37.14        
+Core8: 35.18        Core24: 34.10        
+Core9: 36.51        Core25: 35.55        
+Core10: 18.81        Core26: 29.79        
+Core11: 35.98        Core27: 33.13        
+Core12: 31.41        Core28: 30.24        
+Core13: 45.06        Core29: 41.04        
+Core14: 35.42        Core30: 38.81        
+Core15: 32.18        Core31: 36.47        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.02
+
+DDR read Latency(ns)
+Socket0: 17.81
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 27.09        Core16: 26.93        
+Core1: 39.43        Core17: 38.06        
+Core2: 42.31        Core18: 38.36        
+Core3: 31.71        Core19: 22.23        
+Core4: 9.34        Core20: 21.92        
+Core5: 29.45        Core21: 34.69        
+Core6: 37.92        Core22: 31.19        
+Core7: 39.55        Core23: 33.85        
+Core8: 35.97        Core24: 31.18        
+Core9: 36.80        Core25: 35.07        
+Core10: 18.72        Core26: 28.80        
+Core11: 33.43        Core27: 33.15        
+Core12: 34.58        Core28: 34.30        
+Core13: 43.38        Core29: 36.23        
+Core14: 34.11        Core30: 31.67        
+Core15: 30.88        Core31: 35.11        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.96
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 22.06        Core16: 27.53        
+Core1: 21.30        Core17: 37.08        
+Core2: 40.29        Core18: 30.70        
+Core3: 32.56        Core19: 23.01        
+Core4: 9.28        Core20: 20.80        
+Core5: 29.52        Core21: 35.67        
+Core6: 35.16        Core22: 31.06        
+Core7: 36.00        Core23: 40.02        
+Core8: 30.63        Core24: 37.06        
+Core9: 37.59        Core25: 36.15        
+Core10: 18.85        Core26: 31.13        
+Core11: 34.40        Core27: 31.60        
+Core12: 21.26        Core28: 31.38        
+Core13: 43.24        Core29: 38.52        
+Core14: 33.91        Core30: 36.03        
+Core15: 31.42        Core31: 34.16        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.90
+
+DDR read Latency(ns)
+Socket0: 17.86
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 30.28        Core16: 27.80        
+Core1: 37.91        Core17: 34.56        
+Core2: 41.09        Core18: 33.18        
+Core3: 30.45        Core19: 22.83        
+Core4: 9.33        Core20: 21.56        
+Core5: 29.02        Core21: 34.65        
+Core6: 34.68        Core22: 31.44        
+Core7: 34.95        Core23: 39.13        
+Core8: 33.22        Core24: 35.17        
+Core9: 36.11        Core25: 36.24        
+Core10: 18.68        Core26: 32.49        
+Core11: 36.84        Core27: 33.20        
+Core12: 32.41        Core28: 32.24        
+Core13: 39.91        Core29: 37.17        
+Core14: 35.49        Core30: 37.00        
+Core15: 32.66        Core31: 34.59        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.95
+
+DDR read Latency(ns)
+Socket0: 17.78
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 27.62        Core16: 27.66        
+Core1: 36.59        Core17: 19.07        
+Core2: 46.84        Core18: 38.90        
+Core3: 31.64        Core19: 22.55        
+Core4: 9.42        Core20: 22.40        
+Core5: 32.12        Core21: 35.98        
+Core6: 34.82        Core22: 31.93        
+Core7: 42.49        Core23: 40.22        
+Core8: 41.52        Core24: 43.35        
+Core9: 42.88        Core25: 38.41        
+Core10: 18.84        Core26: 32.12        
+Core11: 32.78        Core27: 33.50        
+Core12: 35.90        Core28: 34.12        
+Core13: 44.58        Core29: 38.95        
+Core14: 37.60        Core30: 42.49        
+Core15: 33.09        Core31: 36.61        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.14
+
+DDR read Latency(ns)
+Socket0: 17.79
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 22.50        Core16: 26.44        
+Core1: 35.34        Core17: 36.10        
+Core2: 34.62        Core18: 31.37        
+Core3: 30.63        Core19: 23.19        
+Core4: 9.39        Core20: 21.37        
+Core5: 28.62        Core21: 34.26        
+Core6: 22.25        Core22: 30.24        
+Core7: 33.59        Core23: 39.11        
+Core8: 32.96        Core24: 35.77        
+Core9: 38.52        Core25: 36.19        
+Core10: 18.87        Core26: 28.39        
+Core11: 32.05        Core27: 34.33        
+Core12: 38.47        Core28: 39.99        
+Core13: 41.49        Core29: 39.72        
+Core14: 36.41        Core30: 40.72        
+Core15: 33.31        Core31: 36.29        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.03
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 30.42        Core16: 28.84        
+Core1: 34.43        Core17: 37.38        
+Core2: 33.17        Core18: 30.02        
+Core3: 31.36        Core19: 22.97        
+Core4: 9.33        Core20: 22.13        
+Core5: 28.43        Core21: 35.21        
+Core6: 37.36        Core22: 31.57        
+Core7: 35.50        Core23: 35.39        
+Core8: 42.01        Core24: 43.75        
+Core9: 37.10        Core25: 34.42        
+Core10: 19.09        Core26: 31.34        
+Core11: 38.80        Core27: 33.96        
+Core12: 19.04        Core28: 31.92        
+Core13: 41.94        Core29: 37.13        
+Core14: 35.24        Core30: 46.19        
+Core15: 31.74        Core31: 36.31        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.00
+
+DDR read Latency(ns)
+Socket0: 17.89
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 23.44        Core16: 22.62        
+Core1: 27.63        Core17: 40.72        
+Core2: 46.11        Core18: 25.76        
+Core3: 35.43        Core19: 23.24        
+Core4: 10.20        Core20: 25.73        
+Core5: 29.36        Core21: 34.08        
+Core6: 28.51        Core22: 38.78        
+Core7: 38.96        Core23: 26.93        
+Core8: 38.76        Core24: 41.05        
+Core9: 38.36        Core25: 35.50        
+Core10: 15.72        Core26: 31.84        
+Core11: 27.69        Core27: 35.37        
+Core12: 27.79        Core28: 31.89        
+Core13: 29.21        Core29: 39.21        
+Core14: 21.85        Core30: 45.34        
+Core15: 31.44        Core31: 36.07        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 11.27
+
+DDR read Latency(ns)
+Socket0: 17.63
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 23.03        Core16: 26.48        
+Core1: 36.94        Core17: 40.14        
+Core2: 40.14        Core18: 31.30        
+Core3: 32.45        Core19: 22.76        
+Core4: 9.44        Core20: 22.03        
+Core5: 34.21        Core21: 35.92        
+Core6: 33.38        Core22: 28.16        
+Core7: 40.81        Core23: 32.17        
+Core8: 38.17        Core24: 39.91        
+Core9: 38.67        Core25: 35.72        
+Core10: 16.95        Core26: 28.44        
+Core11: 31.59        Core27: 34.21        
+Core12: 35.11        Core28: 32.21        
+Core13: 29.49        Core29: 28.38        
+Core14: 32.79        Core30: 38.81        
+Core15: 32.43        Core31: 35.51        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.07
+
+DDR read Latency(ns)
+Socket0: 17.91
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 21.29        Core16: 27.72        
+Core1: 36.68        Core17: 38.11        
+Core2: 36.25        Core18: 37.81        
+Core3: 35.79        Core19: 23.60        
+Core4: 10.04        Core20: 24.98        
+Core5: 35.53        Core21: 36.80        
+Core6: 35.18        Core22: 34.50        
+Core7: 33.83        Core23: 10.90        
+Core8: 41.32        Core24: 8.25        
+Core9: 39.52        Core25: 18.27        
+Core10: 18.60        Core26: 30.87        
+Core11: 33.30        Core27: 20.85        
+Core12: 22.41        Core28: 35.56        
+Core13: 20.98        Core29: 36.73        
+Core14: 36.17        Core30: 40.88        
+Core15: 34.20        Core31: 37.37        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.55
+
+DDR read Latency(ns)
+Socket0: 17.48
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 22.11        Core16: 19.54        
+Core1: 33.59        Core17: 36.47        
+Core2: 40.55        Core18: 31.93        
+Core3: 31.09        Core19: 22.52        
+Core4: 10.28        Core20: 25.41        
+Core5: 23.18        Core21: 33.34        
+Core6: 36.29        Core22: 34.00        
+Core7: 39.34        Core23: 31.55        
+Core8: 38.64        Core24: 35.07        
+Core9: 36.39        Core25: 40.32        
+Core10: 16.35        Core26: 30.23        
+Core11: 33.27        Core27: 36.09        
+Core12: 25.23        Core28: 35.09        
+Core13: 31.01        Core29: 35.89        
+Core14: 40.70        Core30: 38.57        
+Core15: 32.02        Core31: 36.50        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 11.04
+
+DDR read Latency(ns)
+Socket0: 17.72
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 20.07        Core16: 18.27        
+Core1: 33.18        Core17: 38.96        
+Core2: 36.90        Core18: 37.27        
+Core3: 33.36        Core19: 22.87        
+Core4: 11.19        Core20: 29.23        
+Core5: 14.30        Core21: 34.77        
+Core6: 34.27        Core22: 36.67        
+Core7: 36.98        Core23: 12.70        
+Core8: 38.98        Core24: 8.02        
+Core9: 38.18        Core25: 18.29        
+Core10: 18.97        Core26: 38.02        
+Core11: 30.48        Core27: 37.18        
+Core12: 21.47        Core28: 40.76        
+Core13: 28.59        Core29: 35.42        
+Core14: 20.67        Core30: 35.21        
+Core15: 33.74        Core31: 36.90        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 11.61
+
+DDR read Latency(ns)
+Socket0: 17.31
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 32.59        Core16: 35.18        
+Core1: 36.92        Core17: 39.03        
+Core2: 40.70        Core18: 31.43        
+Core3: 31.02        Core19: 22.06        
+Core4: 9.34        Core20: 21.39        
+Core5: 33.91        Core21: 37.38        
+Core6: 33.72        Core22: 30.81        
+Core7: 37.63        Core23: 32.51        
+Core8: 38.81        Core24: 46.09        
+Core9: 37.81        Core25: 36.43        
+Core10: 17.22        Core26: 32.52        
+Core11: 32.74        Core27: 31.96        
+Core12: 36.52        Core28: 31.04        
+Core13: 25.34        Core29: 32.71        
+Core14: 26.04        Core30: 30.57        
+Core15: 31.58        Core31: 36.71        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.95
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 33.12        Core16: 35.05        
+Core1: 34.55        Core17: 36.86        
+Core2: 40.00        Core18: 31.32        
+Core3: 33.14        Core19: 26.93        
+Core4: 9.38        Core20: 20.08        
+Core5: 33.30        Core21: 36.83        
+Core6: 21.19        Core22: 34.18        
+Core7: 41.13        Core23: 33.05        
+Core8: 35.11        Core24: 33.04        
+Core9: 37.56        Core25: 36.77        
+Core10: 17.52        Core26: 30.25        
+Core11: 36.06        Core27: 33.05        
+Core12: 36.37        Core28: 31.08        
+Core13: 26.29        Core29: 32.00        
+Core14: 26.48        Core30: 34.98        
+Core15: 31.76        Core31: 34.89        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.03
+
+DDR read Latency(ns)
+Socket0: 17.79
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.69        Core16: 32.69        
+Core1: 34.51        Core17: 37.33        
+Core2: 34.60        Core18: 28.16        
+Core3: 32.18        Core19: 21.74        
+Core4: 9.38        Core20: 21.29        
+Core5: 31.53        Core21: 35.75        
+Core6: 34.11        Core22: 28.51        
+Core7: 37.08        Core23: 37.33        
+Core8: 35.63        Core24: 37.28        
+Core9: 35.50        Core25: 38.23        
+Core10: 17.39        Core26: 32.76        
+Core11: 31.85        Core27: 31.82        
+Core12: 36.03        Core28: 32.30        
+Core13: 26.41        Core29: 33.32        
+Core14: 25.96        Core30: 27.31        
+Core15: 31.53        Core31: 36.62        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.00
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 22.78        Core16: 36.44        
+Core1: 28.11        Core17: 36.37        
+Core2: 42.31        Core18: 37.69        
+Core3: 32.94        Core19: 22.03        
+Core4: 9.69        Core20: 25.80        
+Core5: 38.16        Core21: 37.45        
+Core6: 23.60        Core22: 15.47        
+Core7: 40.28        Core23: 38.81        
+Core8: 36.54        Core24: 40.12        
+Core9: 43.00        Core25: 37.76        
+Core10: 17.79        Core26: 36.24        
+Core11: 34.27        Core27: 34.58        
+Core12: 37.66        Core28: 33.03        
+Core13: 28.03        Core29: 34.03        
+Core14: 31.07        Core30: 39.13        
+Core15: 33.52        Core31: 36.63        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.50
+
+DDR read Latency(ns)
+Socket0: 17.73
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 52.25        Core16: 34.80        
+Core1: 26.13        Core17: 33.19        
+Core2: 39.29        Core18: 29.73        
+Core3: 34.27        Core19: 22.10        
+Core4: 9.42        Core20: 22.19        
+Core5: 33.27        Core21: 37.69        
+Core6: 33.18        Core22: 32.86        
+Core7: 37.31        Core23: 35.99        
+Core8: 34.77        Core24: 34.24        
+Core9: 37.80        Core25: 50.10        
+Core10: 17.95        Core26: 31.64        
+Core11: 39.54        Core27: 35.64        
+Core12: 35.27        Core28: 32.57        
+Core13: 30.30        Core29: 32.85        
+Core14: 35.33        Core30: 35.78        
+Core15: 31.91        Core31: 35.53        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.09
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 28.28        Core16: 41.53        
+Core1: 25.54        Core17: 33.84        
+Core2: 39.16        Core18: 29.61        
+Core3: 35.09        Core19: 23.19        
+Core4: 9.40        Core20: 21.73        
+Core5: 36.00        Core21: 39.48        
+Core6: 23.11        Core22: 29.39        
+Core7: 36.00        Core23: 39.27        
+Core8: 37.30        Core24: 35.59        
+Core9: 38.66        Core25: 36.00        
+Core10: 17.30        Core26: 29.48        
+Core11: 37.20        Core27: 33.04        
+Core12: 38.31        Core28: 36.51        
+Core13: 29.39        Core29: 28.72        
+Core14: 35.84        Core30: 37.67        
+Core15: 31.29        Core31: 35.40        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.02
+
+DDR read Latency(ns)
+Socket0: 17.78
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.38        Core16: 33.39        
+Core1: 25.29        Core17: 33.51        
+Core2: 43.08        Core18: 31.75        
+Core3: 33.37        Core19: 23.02        
+Core4: 9.38        Core20: 24.61        
+Core5: 33.53        Core21: 37.48        
+Core6: 32.98        Core22: 30.07        
+Core7: 37.60        Core23: 36.07        
+Core8: 37.04        Core24: 34.49        
+Core9: 40.17        Core25: 31.56        
+Core10: 17.26        Core26: 31.17        
+Core11: 33.18        Core27: 33.53        
+Core12: 38.55        Core28: 31.52        
+Core13: 29.20        Core29: 29.98        
+Core14: 36.00        Core30: 39.78        
+Core15: 30.62        Core31: 34.50        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.02
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 31.17        Core16: 34.52        
+Core1: 25.99        Core17: 34.10        
+Core2: 39.92        Core18: 33.06        
+Core3: 34.51        Core19: 23.29        
+Core4: 9.41        Core20: 22.25        
+Core5: 33.62        Core21: 37.13        
+Core6: 33.83        Core22: 28.94        
+Core7: 36.00        Core23: 34.62        
+Core8: 32.06        Core24: 31.27        
+Core9: 38.31        Core25: 31.17        
+Core10: 17.31        Core26: 32.48        
+Core11: 33.64        Core27: 19.53        
+Core12: 23.81        Core28: 30.92        
+Core13: 29.30        Core29: 29.01        
+Core14: 39.32        Core30: 43.08        
+Core15: 32.47        Core31: 34.88        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.08
+
+DDR read Latency(ns)
+Socket0: 17.86
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 37.27        Core16: 34.32        
+Core1: 24.71        Core17: 34.28        
+Core2: 38.52        Core18: 36.52        
+Core3: 32.20        Core19: 21.62        
+Core4: 9.43        Core20: 22.44        
+Core5: 36.02        Core21: 37.73        
+Core6: 23.62        Core22: 30.09        
+Core7: 39.10        Core23: 41.57        
+Core8: 31.27        Core24: 39.45        
+Core9: 36.67        Core25: 35.75        
+Core10: 17.28        Core26: 29.82        
+Core11: 32.12        Core27: 36.29        
+Core12: 35.80        Core28: 32.23        
+Core13: 29.07        Core29: 34.84        
+Core14: 34.31        Core30: 41.27        
+Core15: 31.74        Core31: 35.55        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.10
+
+DDR read Latency(ns)
+Socket0: 17.83
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 33.90        Core16: 35.64        
+Core1: 25.33        Core17: 33.45        
+Core2: 39.63        Core18: 37.05        
+Core3: 33.25        Core19: 22.17        
+Core4: 9.31        Core20: 24.72        
+Core5: 34.54        Core21: 37.60        
+Core6: 37.01        Core22: 29.68        
+Core7: 38.52        Core23: 34.56        
+Core8: 33.81        Core24: 34.68        
+Core9: 36.37        Core25: 36.49        
+Core10: 17.39        Core26: 31.30        
+Core11: 32.99        Core27: 32.65        
+Core12: 24.66        Core28: 32.20        
+Core13: 30.59        Core29: 28.79        
+Core14: 36.10        Core30: 34.92        
+Core15: 32.13        Core31: 35.68        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.98
+
+DDR read Latency(ns)
+Socket0: 17.80
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.79        Core16: 32.52        
+Core1: 24.80        Core17: 32.76        
+Core2: 42.99        Core18: 31.14        
+Core3: 31.59        Core19: 21.75        
+Core4: 9.36        Core20: 23.97        
+Core5: 32.40        Core21: 36.71        
+Core6: 34.99        Core22: 28.88        
+Core7: 39.43        Core23: 37.29        
+Core8: 30.83        Core24: 41.17        
+Core9: 36.35        Core25: 33.52        
+Core10: 17.28        Core26: 29.14        
+Core11: 31.52        Core27: 31.19        
+Core12: 35.16        Core28: 29.29        
+Core13: 28.27        Core29: 27.37        
+Core14: 34.53        Core30: 31.36        
+Core15: 30.62        Core31: 38.91        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.99
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 26.58        Core16: 35.28        
+Core1: 25.89        Core17: 33.80        
+Core2: 41.03        Core18: 31.79        
+Core3: 32.51        Core19: 22.58        
+Core4: 9.51        Core20: 26.84        
+Core5: 30.20        Core21: 14.21        
+Core6: 34.19        Core22: 23.30        
+Core7: 38.91        Core23: 33.06        
+Core8: 36.22        Core24: 48.63        
+Core9: 39.64        Core25: 38.80        
+Core10: 17.43        Core26: 30.78        
+Core11: 30.51        Core27: 33.73        
+Core12: 32.47        Core28: 34.22        
+Core13: 28.32        Core29: 28.27        
+Core14: 34.28        Core30: 40.76        
+Core15: 32.75        Core31: 36.56        
 
 Average latency per socket
 
@@ -135,39 +1344,565 @@ L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 Socket0: 10.28
 
 DDR read Latency(ns)
-Socket0: 16.94
+Socket0: 17.75
 
 
 L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
 Socket0 Thread0     Socket0 Thread1     
 -----------------------------------------------------------------------------
-Core0: 26.04        Core16: 35.70        
-Core1: 35.11        Core17: 29.51        
-Core2: 33.97        Core18: 32.86        
-Core3: 35.21        Core19: 31.02        
-Core4: 9.74        Core20: 22.20        
-Core5: 36.16        Core21: 31.66        
-Core6: 34.55        Core22: 32.59        
-Core7: 22.21        Core23: 33.53        
-Core8: 36.14        Core24: 33.87        
-Core9: 32.92        Core25: 32.83        
-Core10: 35.25        Core26: 37.96        
-Core11: 30.22        Core27: 27.32        
-Core12: 34.62        Core28: 18.28        
-Core13: 26.47        Core29: 33.06        
-Core14: 28.91        Core30: 29.43        
-Core15: 39.08        Core31: 35.71        
+Core0: 34.30        Core16: 37.67        
+Core1: 26.01        Core17: 33.86        
+Core2: 42.17        Core18: 31.99        
+Core3: 33.98        Core19: 21.37        
+Core4: 9.65        Core20: 24.16        
+Core5: 39.43        Core21: 18.10        
+Core6: 40.32        Core22: 30.88        
+Core7: 38.94        Core23: 36.70        
+Core8: 35.17        Core24: 46.45        
+Core9: 37.28        Core25: 37.46        
+Core10: 17.22        Core26: 31.37        
+Core11: 38.41        Core27: 34.51        
+Core12: 22.37        Core28: 30.32        
+Core13: 29.79        Core29: 36.22        
+Core14: 41.26        Core30: 42.78        
+Core15: 32.56        Core31: 36.49        
 
 Average latency per socket
 
 L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
 
-Socket0: 10.53
+Socket0: 10.46
 
 DDR read Latency(ns)
-Socket0: 16.95
-DEBUG: caught signal to interrupt (Terminated).
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 22.47        Core16: 35.30        
+Core1: 24.95        Core17: 33.59        
+Core2: 38.11        Core18: 31.94        
+Core3: 30.51        Core19: 21.68        
+Core4: 9.39        Core20: 21.93        
+Core5: 34.44        Core21: 36.82        
+Core6: 36.17        Core22: 33.84        
+Core7: 35.59        Core23: 34.47        
+Core8: 36.54        Core24: 39.95        
+Core9: 42.97        Core25: 42.80        
+Core10: 17.28        Core26: 31.35        
+Core11: 38.69        Core27: 33.47        
+Core12: 35.40        Core28: 31.50        
+Core13: 28.77        Core29: 30.04        
+Core14: 39.95        Core30: 37.73        
+Core15: 32.42        Core31: 35.30        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.03
+
+DDR read Latency(ns)
+Socket0: 17.85
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 22.65        Core16: 32.29        
+Core1: 25.52        Core17: 35.73        
+Core2: 36.55        Core18: 33.72        
+Core3: 33.04        Core19: 22.01        
+Core4: 9.34        Core20: 22.72        
+Core5: 36.04        Core21: 35.21        
+Core6: 38.97        Core22: 30.75        
+Core7: 35.50        Core23: 34.42        
+Core8: 35.51        Core24: 35.15        
+Core9: 39.90        Core25: 33.63        
+Core10: 16.50        Core26: 32.72        
+Core11: 40.84        Core27: 32.68        
+Core12: 22.18        Core28: 31.31        
+Core13: 30.39        Core29: 33.25        
+Core14: 32.47        Core30: 40.23        
+Core15: 31.25        Core31: 36.37        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.99
+
+DDR read Latency(ns)
+Socket0: 17.75
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.91        Core16: 34.80        
+Core1: 26.18        Core17: 35.57        
+Core2: 35.59        Core18: 29.47        
+Core3: 31.52        Core19: 22.69        
+Core4: 9.38        Core20: 21.88        
+Core5: 31.07        Core21: 34.94        
+Core6: 37.80        Core22: 31.75        
+Core7: 38.23        Core23: 35.11        
+Core8: 40.01        Core24: 44.12        
+Core9: 38.35        Core25: 36.27        
+Core10: 17.79        Core26: 34.44        
+Core11: 33.21        Core27: 32.15        
+Core12: 28.09        Core28: 33.86        
+Core13: 29.21        Core29: 30.21        
+Core14: 34.51        Core30: 39.09        
+Core15: 31.96        Core31: 36.38        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.02
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 21.16        Core16: 34.67        
+Core1: 25.66        Core17: 35.07        
+Core2: 39.74        Core18: 30.03        
+Core3: 33.59        Core19: 26.86        
+Core4: 9.41        Core20: 22.35        
+Core5: 31.19        Core21: 24.55        
+Core6: 33.56        Core22: 30.38        
+Core7: 40.51        Core23: 34.41        
+Core8: 35.34        Core24: 40.32        
+Core9: 34.45        Core25: 35.08        
+Core10: 17.53        Core26: 33.02        
+Core11: 33.58        Core27: 33.55        
+Core12: 33.25        Core28: 36.91        
+Core13: 28.87        Core29: 29.69        
+Core14: 36.38        Core30: 36.23        
+Core15: 32.17        Core31: 36.33        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.06
+
+DDR read Latency(ns)
+Socket0: 17.87
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 32.04        Core16: 38.69        
+Core1: 26.21        Core17: 35.33        
+Core2: 47.15        Core18: 33.35        
+Core3: 29.04        Core19: 21.50        
+Core4: 9.45        Core20: 22.94        
+Core5: 34.00        Core21: 25.13        
+Core6: 41.25        Core22: 31.40        
+Core7: 40.44        Core23: 39.96        
+Core8: 35.44        Core24: 40.66        
+Core9: 36.51        Core25: 40.15        
+Core10: 17.37        Core26: 33.41        
+Core11: 35.13        Core27: 19.79        
+Core12: 36.82        Core28: 37.66        
+Core13: 29.11        Core29: 31.88        
+Core14: 34.68        Core30: 34.18        
+Core15: 32.86        Core31: 37.03        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.09
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 21.19        Core16: 31.50        
+Core1: 25.68        Core17: 31.83        
+Core2: 38.06        Core18: 30.44        
+Core3: 32.89        Core19: 22.73        
+Core4: 9.34        Core20: 21.66        
+Core5: 34.57        Core21: 35.75        
+Core6: 36.12        Core22: 28.75        
+Core7: 35.56        Core23: 34.15        
+Core8: 39.81        Core24: 35.94        
+Core9: 37.58        Core25: 32.18        
+Core10: 17.13        Core26: 28.21        
+Core11: 33.64        Core27: 32.92        
+Core12: 36.50        Core28: 31.83        
+Core13: 29.89        Core29: 28.87        
+Core14: 33.60        Core30: 35.13        
+Core15: 32.97        Core31: 35.33        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.96
+
+DDR read Latency(ns)
+Socket0: 17.83
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 28.56        Core16: 35.83        
+Core1: 25.66        Core17: 34.46        
+Core2: 33.71        Core18: 38.15        
+Core3: 28.81        Core19: 20.66        
+Core4: 9.40        Core20: 21.14        
+Core5: 33.67        Core21: 34.49        
+Core6: 37.28        Core22: 27.71        
+Core7: 31.21        Core23: 37.62        
+Core8: 33.41        Core24: 39.66        
+Core9: 40.23        Core25: 40.36        
+Core10: 17.37        Core26: 31.78        
+Core11: 33.93        Core27: 36.00        
+Core12: 25.57        Core28: 33.75        
+Core13: 29.09        Core29: 32.83        
+Core14: 38.54        Core30: 40.21        
+Core15: 31.34        Core31: 36.40        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.08
+
+DDR read Latency(ns)
+Socket0: 17.83
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 23.82        Core16: 35.41        
+Core1: 26.20        Core17: 33.90        
+Core2: 39.80        Core18: 32.07        
+Core3: 33.04        Core19: 23.28        
+Core4: 9.36        Core20: 22.18        
+Core5: 32.88        Core21: 35.45        
+Core6: 38.33        Core22: 29.39        
+Core7: 45.61        Core23: 34.78        
+Core8: 36.13        Core24: 32.74        
+Core9: 45.89        Core25: 35.90        
+Core10: 17.33        Core26: 33.31        
+Core11: 37.22        Core27: 32.61        
+Core12: 36.38        Core28: 28.32        
+Core13: 29.42        Core29: 26.36        
+Core14: 37.05        Core30: 44.95        
+Core15: 31.82        Core31: 35.97        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.01
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 30.89        Core16: 32.44        
+Core1: 25.41        Core17: 31.82        
+Core2: 33.47        Core18: 33.20        
+Core3: 32.17        Core19: 22.86        
+Core4: 9.45        Core20: 22.47        
+Core5: 34.53        Core21: 38.27        
+Core6: 36.71        Core22: 31.12        
+Core7: 42.61        Core23: 35.52        
+Core8: 35.54        Core24: 43.30        
+Core9: 38.13        Core25: 38.15        
+Core10: 17.21        Core26: 34.12        
+Core11: 33.28        Core27: 31.99        
+Core12: 23.72        Core28: 29.62        
+Core13: 29.94        Core29: 31.37        
+Core14: 37.90        Core30: 40.47        
+Core15: 32.59        Core31: 35.42        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.08
+
+DDR read Latency(ns)
+Socket0: 17.87
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 23.88        Core16: 33.19        
+Core1: 25.21        Core17: 32.88        
+Core2: 46.23        Core18: 33.18        
+Core3: 33.91        Core19: 22.11        
+Core4: 9.40        Core20: 21.51        
+Core5: 32.61        Core21: 35.44        
+Core6: 39.15        Core22: 31.43        
+Core7: 41.86        Core23: 34.27        
+Core8: 34.42        Core24: 38.43        
+Core9: 34.96        Core25: 37.63        
+Core10: 17.32        Core26: 31.52        
+Core11: 37.31        Core27: 33.18        
+Core12: 32.48        Core28: 30.36        
+Core13: 29.50        Core29: 30.41        
+Core14: 37.77        Core30: 42.21        
+Core15: 33.25        Core31: 34.96        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.02
+
+DDR read Latency(ns)
+Socket0: 17.84
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 30.36        Core16: 36.68        
+Core1: 25.69        Core17: 32.43        
+Core2: 34.45        Core18: 30.64        
+Core3: 28.30        Core19: 20.76        
+Core4: 9.32        Core20: 21.09        
+Core5: 35.98        Core21: 35.01        
+Core6: 37.01        Core22: 29.38        
+Core7: 38.11        Core23: 36.36        
+Core8: 35.41        Core24: 38.60        
+Core9: 37.36        Core25: 36.56        
+Core10: 17.21        Core26: 31.73        
+Core11: 31.49        Core27: 33.18        
+Core12: 23.47        Core28: 33.41        
+Core13: 30.20        Core29: 30.52        
+Core14: 37.97        Core30: 37.27        
+Core15: 32.17        Core31: 35.96        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 9.94
+
+DDR read Latency(ns)
+Socket0: 17.83
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 27.06        Core16: 38.09        
+Core1: 27.00        Core17: 34.35        
+Core2: 44.09        Core18: 34.21        
+Core3: 34.25        Core19: 23.13        
+Core4: 9.40        Core20: 23.10        
+Core5: 35.66        Core21: 24.41        
+Core6: 37.36        Core22: 44.74        
+Core7: 38.13        Core23: 34.57        
+Core8: 42.80        Core24: 40.90        
+Core9: 37.62        Core25: 36.76        
+Core10: 17.45        Core26: 31.97        
+Core11: 38.49        Core27: 33.85        
+Core12: 35.28        Core28: 31.54        
+Core13: 30.74        Core29: 29.90        
+Core14: 38.98        Core30: 36.72        
+Core15: 32.42        Core31: 35.43        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.08
+
+DDR read Latency(ns)
+Socket0: 17.85
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 23.05        Core16: 35.81        
+Core1: 25.87        Core17: 36.26        
+Core2: 37.00        Core18: 35.79        
+Core3: 33.77        Core19: 23.19        
+Core4: 9.42        Core20: 21.39        
+Core5: 36.06        Core21: 36.06        
+Core6: 38.16        Core22: 31.99        
+Core7: 39.16        Core23: 38.38        
+Core8: 36.95        Core24: 37.62        
+Core9: 41.67        Core25: 36.19        
+Core10: 17.53        Core26: 31.95        
+Core11: 35.85        Core27: 33.24        
+Core12: 25.50        Core28: 28.08        
+Core13: 28.14        Core29: 33.06        
+Core14: 38.79        Core30: 42.19        
+Core15: 32.84        Core31: 35.99        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.12
+
+DDR read Latency(ns)
+Socket0: 17.82
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 48.83        Core16: 34.84        
+Core1: 25.56        Core17: 34.76        
+Core2: 32.17        Core18: 33.32        
+Core3: 31.86        Core19: 22.09        
+Core4: 9.39        Core20: 20.51        
+Core5: 31.36        Core21: 36.75        
+Core6: 41.00        Core22: 30.12        
+Core7: 32.29        Core23: 35.33        
+Core8: 36.05        Core24: 33.38        
+Core9: 35.60        Core25: 34.43        
+Core10: 17.44        Core26: 29.64        
+Core11: 33.89        Core27: 31.97        
+Core12: 35.29        Core28: 26.30        
+Core13: 28.68        Core29: 26.12        
+Core14: 36.80        Core30: 29.79        
+Core15: 31.37        Core31: 37.40        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.01
+
+DDR read Latency(ns)
+Socket0: 17.87
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 19.89        Core16: 33.73        
+Core1: 25.84        Core17: 32.18        
+Core2: 38.89        Core18: 37.80        
+Core3: 32.28        Core19: 22.15        
+Core4: 9.45        Core20: 23.04        
+Core5: 32.30        Core21: 36.52        
+Core6: 42.64        Core22: 29.55        
+Core7: 39.56        Core23: 38.09        
+Core8: 37.34        Core24: 42.82        
+Core9: 34.55        Core25: 43.17        
+Core10: 17.49        Core26: 31.76        
+Core11: 33.05        Core27: 19.63        
+Core12: 24.34        Core28: 30.59        
+Core13: 29.47        Core29: 32.14        
+Core14: 33.12        Core30: 35.32        
+Core15: 32.53        Core31: 35.14        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 10.11
+
+DDR read Latency(ns)
+Socket0: 17.93
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 25.97        Core16: 36.14        
+Core1: 27.59        Core17: 36.66        
+Core2: 47.40        Core18: 34.61        
+Core3: 36.23        Core19: 23.05        
+Core4: 10.72        Core20: 27.25        
+Core5: 18.71        Core21: 36.41        
+Core6: 40.00        Core22: 38.09        
+Core7: 41.66        Core23: 37.83        
+Core8: 44.13        Core24: 43.35        
+Core9: 40.97        Core25: 42.10        
+Core10: 17.23        Core26: 34.34        
+Core11: 33.96        Core27: 37.03        
+Core12: 25.14        Core28: 36.86        
+Core13: 12.91        Core29: 31.00        
+Core14: 46.23        Core30: 8.33        
+Core15: 19.98        Core31: 37.15        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 11.11
+
+DDR read Latency(ns)
+Socket0: 17.48
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 29.43        Core16: 35.67        
+Core1: 26.27        Core17: 38.55        
+Core2: 45.96        Core18: 26.63        
+Core3: 34.36        Core19: 23.37        
+Core4: 10.29        Core20: 22.63        
+Core5: 26.42        Core21: 26.33        
+Core6: 42.18        Core22: 35.58        
+Core7: 42.41        Core23: 30.17        
+Core8: 41.11        Core24: 40.23        
+Core9: 39.75        Core25: 34.54        
+Core10: 14.92        Core26: 36.28        
+Core11: 28.16        Core27: 36.87        
+Core12: 25.33        Core28: 36.89        
+Core13: 21.07        Core29: 28.28        
+Core14: 28.32        Core30: 35.60        
+Core15: 44.53        Core31: 37.50        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 11.32
+
+DDR read Latency(ns)
+Socket0: 17.65
 Cleaning up
  Closed perf event handles
  Zeroed uncore PMU registers

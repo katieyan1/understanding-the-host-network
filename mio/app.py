@@ -90,8 +90,16 @@ def run_benchmark(args, env):
     mem_numa = args.ant_mem_numa
     numa_order = [int(x) for x in args.ant_numa_order.split(',')]
     ant_duration = args.ant_duration
+    if args.stats_samples is not None and args.stats_samples <= 0:
+        raise ValueError('--stats_samples must be positive')
+    if args.stats_gran <= 0:
+        raise ValueError('--stats_gran must be positive')
+    stats_duration = RECORD_DURATION
+    if args.stats_samples is not None:
+        stats_duration = args.stats_samples * args.stats_gran
+    stats_groups = 4 if env.get_arch() == 'icelake' else RECORD_GROUPS
 
-    if args.ant and args.stats and ant_duration <= WARMUP_DURATION + RECORD_DURATION*RECORD_GROUPS:
+    if args.ant and args.stats and ant_duration <= WARMUP_DURATION + stats_duration*stats_groups:
         raise Exception('Antagonist Duration too small for measuring all stats')
 
     if args.fio and args.stats_membw and args.fio_duration < WARMUP_DURATION + RECORD_DURATION:
@@ -144,6 +152,10 @@ def run_benchmark(args, env):
         ant_opts = {}
         if args.ant_chunksize:
             ant_opts['chunk_size'] = args.ant_chunksize
+        if args.ant_iterations:
+            ant_opts['iterations'] = args.ant_iterations
+        if args.ant_num_requests:
+            ant_opts['num_requests'] = args.ant_num_requests
 
         if args.sync_durations:
             ant_opts['warmup_duration'] = ANT_WARMUP_DURATION
@@ -237,16 +249,16 @@ def run_benchmark(args, env):
     if args.stats:    
         pcm_mem = PcmMemoryRunner(env.get_pcm_path())
         time.sleep(WARMUP_DURATION)
-        pcm_mem.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-memory.txt'%(prefix, num_cores)), RECORD_DURATION)
+        pcm_mem.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-memory.txt'%(prefix, num_cores)), stats_duration, args.stats_gran, args.stats_samples)
         pcm_latency = PcmLatencyRunner(env.get_pcm_path())
-        pcm_latency.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-latency.txt'%(prefix, num_cores)), RECORD_DURATION)
+        pcm_latency.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-latency.txt'%(prefix, num_cores)), stats_duration, args.stats_gran, args.stats_samples)
         pcm_raw = PcmRawRunner(env.get_pcm_path())
         if env.get_arch() == 'icelake':
             # Collect the validated local-memory DRd pair and IMC occupancy.
             # The Cascade Lake P2M filters below use a different encoding and
             # must not be interpreted as Ice Lake transaction measurements.
-            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha2.txt'%(prefix, num_cores)), events_group_15_icelake, RECORD_DURATION)
-            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-imc.txt'%(prefix, num_cores)), events_group_3, RECORD_DURATION)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha2.txt'%(prefix, num_cores)), events_group_15_icelake, stats_duration, args.stats_gran, args.stats_samples)
+            pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-imc.txt'%(prefix, num_cores)), events_group_3, stats_duration, args.stats_gran, args.stats_samples)
         elif env.get_arch() == 'cascadelake':
             # pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-lfb.txt'%(prefix, num_cores)), events_group_0, RECORD_DURATION)
             pcm_raw.run(os.path.join(env.get_stats_path(), '%s-cores%d.pcm-cha.txt'%(prefix, num_cores)), events_group_7, RECORD_DURATION)
@@ -341,11 +353,15 @@ def main(argv=[]):
     parser.add_argument('--ant_inst_size', help='Instruction size for antagonist', type=int)
     parser.add_argument('--ant_pattern', help='Antagonist access pattern')
     parser.add_argument('--ant_chunksize', help='Antagonist chunk size for random access pattern', type=int)
+    parser.add_argument('--ant_iterations', help='Number of GAPBS benchmark trials', type=int)
+    parser.add_argument('--ant_num_requests', help='Number of Redis benchmark requests per client core', type=int)
     parser.add_argument('--ant_writefrac', help='Antagonist write fraction (percentage)', type=int)
     parser.add_argument('--ant_duration', help='Antagonist run duration', type=int, default=40)
     parser.add_argument('--ant_prestart_duration', help='Time to wait before starting antagonist', type=int)
     parser.add_argument('--ant_hugepages', help='Enable hugepages', action='store_true')
     parser.add_argument('--stats', help='Record stats', action='store_true')
+    parser.add_argument('--stats_samples', help='Number of samples per full-stat metric group', type=int)
+    parser.add_argument('--stats_gran', help='Seconds between full-stat samples', type=float, default=1.0)
     parser.add_argument('--stats_membw', help='Record membw stats', action='store_true')
     parser.add_argument('--stats_cpuutil', help='Record CPU utilization stats', action='store_true')
     parser.add_argument('--disable_prefetch', help='Disable prefetchers', action='store_true')

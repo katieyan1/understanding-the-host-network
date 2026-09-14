@@ -8,17 +8,20 @@ class PcmRawRunner:
         self.proc = None
 
     # Run for a given duration (blocking call)
-    def run(self, out_path, events, duration, granularity=1.0):
+    def run(self, out_path, events, duration, granularity=1.0, samples=None):
         out_f = open(out_path, 'w')
         args = [self.pcm_raw_path, str(granularity)]
         for evt in events:
             args.append('-e')
             args.append(events[evt] + ',' + 'name=' + evt)
         args.append('-f')
+        if samples is not None:
+            args.append('-i=%d' % samples)
 
         self.proc = subprocess.Popen(args, stdout=out_f, stderr=subprocess.STDOUT)
         try:
-            self.proc.wait(timeout=duration)
+            timeout = duration if samples is None else duration + max(10, granularity * 2)
+            self.proc.wait(timeout=timeout)
         except subprocess.TimeoutExpired:
             self.proc.terminate()
             self.proc = None
@@ -35,13 +38,16 @@ class PcmMemoryRunner:
         self.proc = None
 
     # Run for a given duration (blocking call)
-    def run(self, out_path, duration):
+    def run(self, out_path, duration, granularity=1.0, samples=None):
         out_f = open(out_path, 'w')
-        args = [self.pcm_memory_path, '-csv']
+        args = [self.pcm_memory_path, str(granularity), '-csv']
+        if samples is not None:
+            args.append('-i=%d' % samples)
 
         self.proc = subprocess.Popen(args, stdout=out_f, stderr=subprocess.STDOUT)
         try:
-            self.proc.wait(timeout=duration)
+            timeout = duration if samples is None else duration + max(10, granularity * 2)
+            self.proc.wait(timeout=timeout)
         except subprocess.TimeoutExpired:
             self.proc.terminate()
             self.proc = None
@@ -57,13 +63,16 @@ class PcmLatencyRunner:
         self.proc = None
 
     # Run for a given duration (blocking call)
-    def run(self, out_path, duration):
+    def run(self, out_path, duration, granularity=1.0, samples=None):
         out_f = open(out_path, 'w')
         args = [self.pcm_latency_path]
+        if samples is not None:
+            args.append('-i=%d' % samples)
 
         self.proc = subprocess.Popen(args, stdout=out_f, stderr=subprocess.STDOUT)
         try:
-            self.proc.wait(timeout=duration)
+            timeout = duration if samples is None else duration + max(10, granularity * 2)
+            self.proc.wait(timeout=timeout)
         except subprocess.TimeoutExpired:
             self.proc.terminate()
             self.proc = None
@@ -73,4 +82,3 @@ class PcmLatencyRunner:
             self.proc.kill()
 
     
-

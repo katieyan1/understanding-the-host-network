@@ -159,16 +159,18 @@ class StatStore:
 
                     self.d[metric][space_unit].append(float(cols[i].strip()))
 
-    def load_sar(self, filepath):
+    def load_sar(self, filepath, averages_only=True):
         label = 'cpu_util'
         if not label in self.d:
             self.d[label] = {}
         with open(filepath, 'r') as f:
             for line in f:
                 cols = line.split()
-                if len(cols) < 1 or cols[0] != 'Average:':
+                if len(cols) < 2 or not cols[1].isdigit():
                     continue
-                if len(cols) < 2 or (not cols[1].isdigit()):
+                if averages_only and cols[0] != 'Average:':
+                    continue
+                if not averages_only and cols[0] == 'Average:':
                     continue
                 core_idx = int(cols[1])
                 cpu_used = float(cols[2]) + float(cols[4])

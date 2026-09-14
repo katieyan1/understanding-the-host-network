@@ -16,6 +16,8 @@ class GAPBSRunner(Antagonist):
         self.graph_size = 25 # 2^25 nodes
         self.iterations0 = 3
         self.iterations = min(len(self.cores), 16)*self.iterations0
+        if 'iterations' in self.opts:
+            self.iterations = self.opts['iterations']
 
         # numactl --membind 3 --physcpubind 11,15,19,23,27 ./pr -u 25 -n 16
         out_f = open(self.output_path, 'w')

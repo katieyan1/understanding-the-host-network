@@ -12,8 +12,8 @@ Each kernel will be executed 1000 times.
  will be used to compute the reported bandwidth.
 -------------------------------------------------------------
 Your clock granularity/precision appears to be 1 microseconds.
-Each test below will take on the order of 83652 microseconds.
-   (= 83652 clock ticks)
+Each test below will take on the order of 82952 microseconds.
+   (= 82952 clock ticks)
 Increase the size of the arrays if this shows that
 you are not getting at least 20 clock ticks per test.
 -------------------------------------------------------------
@@ -23,4 +23,4 @@ precision of your system timer.
 -------------------------------------------------------------
 Read checksum 0
 Array checksum 535528734720.000000
-Throughput (MB/s): 15945.182303
+Throughput (MB/s): 16059.217296

@@ -19,6 +19,8 @@ class RedisRunner(Antagonist):
         # Default parameters (TODO: Parameterize)
         self.num_keys_per_core = 1000000
         self.num_accesses_per_core = 50000000
+        if 'num_requests' in self.opts:
+            self.num_accesses_per_core = self.opts['num_requests']
         self.num_clients_per_core = 2
         self.write_frac = 0
         self.value_size = 1024
