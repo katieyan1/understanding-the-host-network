@@ -1,0 +1,13 @@
+key,value
+experiment,correlation-fio-randread-cores1
+architecture,icelake
+workload,fio random read
+workload_configuration,1 NVMe; 8 MiB I/O; queue depth 64; 45 seconds
+workload_cpus,4
+memory_numa_node,0
+pcm_warmup_seconds,10
+pcm_window_seconds,5
+cpu_util_sampling_seconds,25
+cha_frequency_hz,2400000000
+imc_frequency_hz,1333000000
+raw_data_directory,.experiment-data

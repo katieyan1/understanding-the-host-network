@@ -1,0 +1,175 @@
+
+=====  Processor information  =====
+Linux arch_perfmon flag  : yes
+Hybrid processor         : no
+IBRS and IBPB supported  : yes
+STIBP supported          : yes
+Spec arch caps supported : yes
+Max CPUID level          : 27
+CPU model number         : 106
+Number of physical cores: 16
+Number of logical cores: 32
+Number of online logical cores: 32
+Threads (logical cores) per physical core: 2
+Num sockets: 1
+Physical cores per socket: 16
+Last level cache slices per socket: 16
+Core PMU (perfmon) version: 5
+Number of core PMU generic (programmable) counters: 8
+Width of generic (programmable) counters: 48 bits
+Number of core PMU fixed counters: 4
+Width of fixed counters: 48 bits
+Nominal core frequency: 2400000000 Hz
+IBRS enabled in the kernel   : yes
+STIBP enabled in the kernel  : no
+The processor is not susceptible to Rogue Data Cache Load: yes
+The processor supports enhanced IBRS                     : yes
+Package thermal spec power: 135 Watt; Package minimum power: 72 Watt; Package maximum power: 557 Watt;
+
+INFO: Linux perf interface to program uncore PMUs is present
+Socket 0: 4 memory controllers detected with total number of 8 channels. 0 UPI ports detected. 4 M2M (mesh to memory) blocks detected. 0 HBM M2M blocks detected. 0 EDC/HBM channels detected. 0 Home Agents detected. 0 M3UPI blocks detected.
+Socket 0: 1 PCU units detected. 6 IIO units detected. 6 IRP units detected. 16 CHA/CBO units detected. 0 MDF units detected. 1 UBOX units detected. 0 CXL units detected.
+Initializing RMIDs
+
+
+ Intel(r) Performance Counter Monitor ($Format:%ci ID=%h$)
+
+ This utility measures Latency information
+
+ Zeroed PMU registers
+ Disabling NMI watchdog since it consumes one hw-PMU counter. To keep NMI watchdog set environment variable PCM_KEEP_NMI_WATCHDOG=1 (this reduces the core metrics set)
+ Closed perf event handles
+Trying to use Linux perf events...
+Successfully programmed on-core PMU using Linux perf
+
+Detected Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz "Intel(r) microarchitecture codename Icelake-SP" stepping 6 microcode level 0xd000421
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 29.55        Core16: 35.91        
+Core1: 48.07        Core17: 41.69        
+Core2: 30.26        Core18: 43.90        
+Core3: 38.86        Core19: 40.49        
+Core4: 174.22        Core20: 25.82        
+Core5: 33.10        Core21: 31.53        
+Core6: 29.90        Core22: 37.26        
+Core7: 32.12        Core23: 34.41        
+Core8: 36.47        Core24: 36.46        
+Core9: 32.14        Core25: 36.85        
+Core10: 30.39        Core26: 38.25        
+Core11: 31.75        Core27: 35.50        
+Core12: 37.64        Core28: 42.28        
+Core13: 44.00        Core29: 48.98        
+Core14: 38.10        Core30: 44.75        
+Core15: 59.59        Core31: 48.50        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 171.79
+
+DDR read Latency(ns)
+Socket0: 14.98
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 33.31        Core16: 39.51        
+Core1: 54.12        Core17: 44.59        
+Core2: 31.81        Core18: 49.73        
+Core3: 56.29        Core19: 42.17        
+Core4: 174.33        Core20: 25.68        
+Core5: 32.84        Core21: 52.75        
+Core6: 34.44        Core22: 33.75        
+Core7: 35.46        Core23: 33.17        
+Core8: 41.86        Core24: 42.05        
+Core9: 34.99        Core25: 41.70        
+Core10: 33.16        Core26: 40.77        
+Core11: 34.75        Core27: 39.85        
+Core12: 37.73        Core28: 25.88        
+Core13: 43.61        Core29: 48.42        
+Core14: 40.88        Core30: 47.98        
+Core15: 61.05        Core31: 48.82        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 172.07
+
+DDR read Latency(ns)
+Socket0: 15.00
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 24.39        Core16: 37.86        
+Core1: 51.93        Core17: 43.88        
+Core2: 31.87        Core18: 49.52        
+Core3: 52.41        Core19: 48.13        
+Core4: 174.31        Core20: 25.88        
+Core5: 31.51        Core21: 50.41        
+Core6: 37.85        Core22: 35.49        
+Core7: 35.01        Core23: 34.27        
+Core8: 46.25        Core24: 40.27        
+Core9: 36.41        Core25: 49.88        
+Core10: 33.95        Core26: 44.56        
+Core11: 37.53        Core27: 49.48        
+Core12: 38.05        Core28: 47.15        
+Core13: 43.77        Core29: 26.74        
+Core14: 41.96        Core30: 50.88        
+Core15: 62.10        Core31: 50.16        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 172.00
+
+DDR read Latency(ns)
+Socket0: 15.01
+
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0 Thread0     Socket0 Thread1     
+-----------------------------------------------------------------------------
+Core0: 31.41        Core16: 41.18        
+Core1: 53.78        Core17: 44.11        
+Core2: 31.76        Core18: 47.62        
+Core3: 47.73        Core19: 39.69        
+Core4: 174.50        Core20: 25.89        
+Core5: 31.79        Core21: 51.17        
+Core6: 31.69        Core22: 35.72        
+Core7: 35.75        Core23: 45.92        
+Core8: 40.99        Core24: 39.69        
+Core9: 42.57        Core25: 41.55        
+Core10: 33.55        Core26: 42.83        
+Core11: 31.69        Core27: 32.04        
+Core12: 39.21        Core28: 29.10        
+Core13: 43.75        Core29: 50.22        
+Core14: 40.13        Core30: 41.29        
+Core15: 60.71        Core31: 48.85        
+
+Average latency per socket
+
+L1 Cache Miss Latency(ns) [Adding 5 clocks for L1 Miss]
+
+Socket0: 171.99
+
+DDR read Latency(ns)
+Socket0: 15.00
+DEBUG: caught signal to interrupt (Terminated).
+Cleaning up
+ Closed perf event handles
+ Zeroed uncore PMU registers
+ Freeing up all RMIDs
+ Re-enabling NMI watchdog.

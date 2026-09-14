@@ -1,0 +1,17 @@
+experiment,metric,scope_selection,space_aggregation,time_aggregation,scope_count,sample_count,value,unit
+correlation-fio-randread-cores1,memreadbw,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,73.275,MB/s
+correlation-fio-randread-cores1,memwritebw,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,7018.400000000001,MB/s
+correlation-fio-randread-cores1,l1_miss_latency,CORE4,avg,avg,1,4,9.7825,ns
+correlation-fio-randread-cores1,drd_occ_agg,SKT0C0;SKT0C1;SKT0C2;SKT0C3;SKT0C4;SKT0C5;SKT0C6;SKT0C7;SKT0C8;SKT0C9;SKT0C10;SKT0C11;SKT0C12;SKT0C13;SKT0C14;SKT0C15,sum,avg,16,64,28839097.5,occupancy_cycles
+correlation-fio-randread-cores1,drd_inserts,SKT0C0;SKT0C1;SKT0C2;SKT0C3;SKT0C4;SKT0C5;SKT0C6;SKT0C7;SKT0C8;SKT0C9;SKT0C10;SKT0C11;SKT0C12;SKT0C13;SKT0C14;SKT0C15,sum,avg,16,64,414731.0,transactions
+correlation-fio-randread-cores1,drd_occupancy,SKT0C0;SKT0C1;SKT0C2;SKT0C3;SKT0C4;SKT0C5;SKT0C6;SKT0C7;SKT0C8;SKT0C9;SKT0C10;SKT0C11;SKT0C12;SKT0C13;SKT0C14;SKT0C15,sum,avg,16,64,0.012016290624999999,request_seconds
+correlation-fio-randread-cores1,drd_latency,SKT0C0;SKT0C1;SKT0C2;SKT0C3;SKT0C4;SKT0C5;SKT0C6;SKT0C7;SKT0C8;SKT0C9;SKT0C10;SKT0C11;SKT0C12;SKT0C13;SKT0C14;SKT0C15,avg,avg,16,64,28.963785652658164,ns
+correlation-fio-randread-cores1,rpq_occ_agg,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,12465061.25,occupancy_cycles
+correlation-fio-randread-cores1,rpq_occupancy,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,avg,avg,8,32,0.001168891715116279,queue_entry_seconds
+correlation-fio-randread-cores1,wpq_full_cycles,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,5333839442.5,cycles
+correlation-fio-randread-cores1,acts_byp,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,1859.75,events
+correlation-fio-randread-cores1,acts_read,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,12717197.75,events
+correlation-fio-randread-cores1,read_activations,SKT0CHAN0;SKT0CHAN1;SKT0CHAN2;SKT0CHAN3;SKT0CHAN4;SKT0CHAN5;SKT0CHAN6;SKT0CHAN7,sum,avg,8,32,12719057.5,events
+correlation-fio-randread-cores1,cpu_util,CORE4,avg,avg,1,1,15.75,percent
+correlation-fio-randread-cores1,fio_xput,SSD0,sum,avg,1,1,55.848,Gbit/s
+correlation-fio-randread-cores1,io_xput,SSD0,sum,avg,1,1,6.981,GB/s
