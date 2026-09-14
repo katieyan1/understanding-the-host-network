@@ -1,0 +1,54 @@
+
+ Intel(r) Performance Counter Monitor: Memory Bandwidth Monitoring Utility ($Format:%ci ID=%h$)
+
+ This utility measures memory bandwidth per channel or per DIMM rank in real-time
+
+
+=====  Processor information  =====
+Linux arch_perfmon flag  : yes
+Hybrid processor         : no
+IBRS and IBPB supported  : yes
+STIBP supported          : yes
+Spec arch caps supported : yes
+Max CPUID level          : 27
+CPU model number         : 106
+Number of physical cores: 16
+Number of logical cores: 32
+Number of online logical cores: 32
+Threads (logical cores) per physical core: 2
+Num sockets: 1
+Physical cores per socket: 16
+Last level cache slices per socket: 16
+Core PMU (perfmon) version: 5
+Number of core PMU generic (programmable) counters: 8
+Width of generic (programmable) counters: 48 bits
+Number of core PMU fixed counters: 4
+Width of fixed counters: 48 bits
+Nominal core frequency: 2400000000 Hz
+IBRS enabled in the kernel   : yes
+STIBP enabled in the kernel  : no
+The processor is not susceptible to Rogue Data Cache Load: yes
+The processor supports enhanced IBRS                     : yes
+Package thermal spec power: 135 Watt; Package minimum power: 72 Watt; Package maximum power: 557 Watt;
+
+INFO: Linux perf interface to program uncore PMUs is present
+Socket 0: 4 memory controllers detected with total number of 8 channels. 0 UPI ports detected. 4 M2M (mesh to memory) blocks detected. 0 HBM M2M blocks detected. 0 EDC/HBM channels detected. 0 Home Agents detected. 0 M3UPI blocks detected.
+Socket 0: 1 PCU units detected. 6 IIO units detected. 6 IRP units detected. 16 CHA/CBO units detected. 0 MDF units detected. 1 UBOX units detected. 0 CXL units detected.
+Initializing RMIDs
+
+
+Detected Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz "Intel(r) microarchitecture codename Icelake-SP" stepping 6 microcode level 0xd000421
+Update every 1 seconds
+Read/Write values expressed in (MB/s)
+INFO: Use -mm option to monitor NM Memory Mode metrics
+,,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,SKT0,System,System,System,System,System,System,System
+Date,Time,Ch0Read,Ch0Write,Ch0PMM_Read,Ch0PMM_Write,Ch1Read,Ch1Write,Ch1PMM_Read,Ch1PMM_Write,Ch2Read,Ch2Write,Ch2PMM_Read,Ch2PMM_Write,Ch3Read,Ch3Write,Ch3PMM_Read,Ch3PMM_Write,Ch4Read,Ch4Write,Ch4PMM_Read,Ch4PMM_Write,Ch5Read,Ch5Write,Ch5PMM_Read,Ch5PMM_Write,Ch6Read,Ch6Write,Ch6PMM_Read,Ch6PMM_Write,Ch7Read,Ch7Write,Ch7PMM_Read,Ch7PMM_Write,Mem Read (MB/s),Mem Write (MB/s),PMM_Read (MB/s), PMM_Write (MB/s),Memory (MB/s),DRAMRead,DRAMWrite,PMMREAD,PMMWrite,Read,Write,Memory
+2026-09-14,03:47:14.535, 2001.39,    2.66,    0.00,    0.00, 2001.84,    2.58,    0.00,    0.00, 2001.23,    2.62,    0.00,    0.00, 2001.91,    2.63,    0.00,    0.00, 2001.29,    2.64,    0.00,    0.00, 2001.51,    2.64,    0.00,    0.00, 2001.51,    2.77,    0.00,    0.00, 2001.50,    2.67,    0.00,    0.00,16012.18,   21.21,    0.00,    0.00,16033.39,  16012.18,     21.21,      0.00,      0.00,  16012.18,     21.21,  16033.39
+2026-09-14,03:47:15.534, 2007.56,    4.58,    0.00,    0.00, 2008.16,    4.50,    0.00,    0.00, 2007.34,    4.53,    0.00,    0.00, 2008.00,    4.57,    0.00,    0.00, 2007.40,    4.57,    0.00,    0.00, 2007.65,    4.55,    0.00,    0.00, 2007.69,    4.68,    0.00,    0.00, 2007.77,    4.59,    0.00,    0.00,16061.58,   36.57,    0.00,    0.00,16098.15,  16061.58,     36.57,      0.00,      0.00,  16061.58,     36.57,  16098.15
+2026-09-14,03:47:16.535, 2001.38,    2.04,    0.00,    0.00, 2001.91,    1.94,    0.00,    0.00, 2001.05,    2.00,    0.00,    0.00, 2001.83,    2.01,    0.00,    0.00, 2001.15,    2.05,    0.00,    0.00, 2001.44,    2.02,    0.00,    0.00, 2001.58,    2.14,    0.00,    0.00, 2001.67,    2.06,    0.00,    0.00,16012.00,   16.28,    0.00,    0.00,16028.28,  16012.00,     16.28,      0.00,      0.00,  16012.00,     16.28,  16028.28
+2026-09-14,03:47:17.535, 1997.82,    1.59,    0.00,    0.00, 1998.23,    1.53,    0.00,    0.00, 1997.38,    1.54,    0.00,    0.00, 1998.19,    1.55,    0.00,    0.00, 1997.49,    1.59,    0.00,    0.00, 1997.74,    1.58,    0.00,    0.00, 1997.96,    1.73,    0.00,    0.00, 1997.99,    1.62,    0.00,    0.00,15982.81,   12.72,    0.00,    0.00,15995.53,  15982.81,     12.72,      0.00,      0.00,  15982.81,     12.72,  15995.53
+DEBUG: caught signal to interrupt (Terminated).
+Cleaning up
+ Closed perf event handles
+ Zeroed uncore PMU registers
+ Freeing up all RMIDs
