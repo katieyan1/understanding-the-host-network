@@ -1,0 +1,13 @@
+experiment,metric_a,unit_a,metric_b,unit_b,sample_count,covariance,correlation
+correlation-fio-randwrite-cores1,drd_occ_agg,occupancy_cycles,drd_occupancy,request_seconds,60,905.25371265522415,1
+correlation-fio-randwrite-cores1,rpq_occ_agg,occupancy_cycles,rpq_occupancy,queue_entry_seconds,60,8861.8690148118076,1
+correlation-fio-randwrite-cores1,drd_inserts,transactions,drd_occ_agg,occupancy_cycles,60,31606543700.575138,0.99998765243471277
+correlation-fio-randwrite-cores1,drd_inserts,transactions,drd_occupancy,request_seconds,60,13.169393208572975,0.99998765243471277
+correlation-fio-randwrite-cores1,acts_read,events,read_activations,events,60,57771202013.149147,0.99252119920931292
+correlation-fio-randwrite-cores1,acts_byp,events,read_activations,events,60,14829452748.01582,0.90182481192229402
+correlation-fio-randwrite-cores1,acts_byp,events,acts_read,events,60,11104975275.240677,0.84233253700328137
+correlation-fio-randwrite-cores1,acts_read,events,rpq_occupancy,queue_entry_seconds,60,384.8902075333761,0.69101572403156841
+correlation-fio-randwrite-cores1,acts_read,events,rpq_occ_agg,occupancy_cycles,60,513058646641.98981,0.69101572403156797
+correlation-fio-randwrite-cores1,read_activations,events,rpq_occupancy,queue_entry_seconds,60,467.54327913040009,0.67298279446172549
+correlation-fio-randwrite-cores1,read_activations,events,rpq_occ_agg,occupancy_cycles,60,623235191080.82251,0.67298279446172493
+correlation-fio-randwrite-cores1,cpu_util,percent,l1_miss_latency,ns,60,616.43180457627159,0.63298165868838197

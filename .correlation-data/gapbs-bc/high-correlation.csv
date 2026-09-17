@@ -1,0 +1,13 @@
+experiment,metric_a,unit_a,metric_b,unit_b,sample_count,covariance,correlation
+correlation-gapbs-bc-cores1,drd_occ_agg,occupancy_cycles,drd_occupancy,request_seconds,60,200679712.28464806,1
+correlation-gapbs-bc-cores1,rpq_occ_agg,occupancy_cycles,rpq_occupancy,queue_entry_seconds,60,5323491.7949217428,1
+correlation-gapbs-bc-cores1,drd_inserts,transactions,drd_occupancy,request_seconds,60,2921378.0473199799,0.99999180091872164
+correlation-gapbs-bc-cores1,drd_inserts,transactions,drd_occ_agg,occupancy_cycles,60,7011307313567951,0.99999180091872153
+correlation-gapbs-bc-cores1,acts_read,events,read_activations,events,60,89644675403876.75,0.99339660181392409
+correlation-gapbs-bc-cores1,read_activations,events,rpq_occ_agg,occupancy_cycles,60,751764111328988.38,0.9259834710781083
+correlation-gapbs-bc-cores1,read_activations,events,rpq_occupancy,queue_entry_seconds,60,563964.07451537007,0.92598347107810819
+correlation-gapbs-bc-cores1,acts_read,events,rpq_occ_agg,occupancy_cycles,60,706424200416213,0.89560262070189622
+correlation-gapbs-bc-cores1,acts_read,events,rpq_occupancy,queue_entry_seconds,60,529950.63797165279,0.89560262070189622
+correlation-gapbs-bc-cores1,drd_latency,ns,drd_occ_agg,occupancy_cycles,60,351820782.57240361,0.79589491059360884
+correlation-gapbs-bc-cores1,drd_latency,ns,drd_occupancy,request_seconds,60,0.14659199273850151,0.79589491059360884
+correlation-gapbs-bc-cores1,drd_inserts,transactions,drd_latency,ns,60,5106729.7582174661,0.79357734455773099

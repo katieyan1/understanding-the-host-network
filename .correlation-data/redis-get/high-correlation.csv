@@ -1,0 +1,15 @@
+experiment,metric_a,unit_a,metric_b,unit_b,sample_count,covariance,correlation
+correlation-redis-get-cores2,drd_occ_agg,occupancy_cycles,drd_occupancy,request_seconds,60,20271.071073551484,1
+correlation-redis-get-cores2,rpq_occ_agg,occupancy_cycles,rpq_occupancy,queue_entry_seconds,60,5434.7303913781798,1
+correlation-redis-get-cores2,drd_inserts,transactions,drd_occupancy,request_seconds,60,296.60256400097234,0.9999948618669241
+correlation-redis-get-cores2,drd_inserts,transactions,drd_occ_agg,occupancy_cycles,60,711846153602.33325,0.99999486186692399
+correlation-redis-get-cores2,acts_read,events,rpq_occ_agg,occupancy_cycles,60,644313031453.63306,0.99241565219482908
+correlation-redis-get-cores2,acts_read,events,rpq_occupancy,queue_entry_seconds,60,483.35561249334813,0.99241565219482886
+correlation-redis-get-cores2,memreadbw,MB/s,memwritebw,MB/s,60,116.10755677966102,0.96677058832598506
+correlation-redis-get-cores2,acts_read,events,read_activations,events,60,68688982762.144913,0.95637215253758223
+correlation-redis-get-cores2,read_activations,events,rpq_occ_agg,occupancy_cycles,60,742810572178.83801,0.92685771575373255
+correlation-redis-get-cores2,read_activations,events,rpq_occupancy,queue_entry_seconds,60,557.24724094436476,0.92685771575373244
+correlation-redis-get-cores2,drd_latency,ns,drd_occupancy,request_seconds,60,0.00013692825889972487,0.72581271536686753
+correlation-redis-get-cores2,drd_latency,ns,drd_occ_agg,occupancy_cycles,60,328627.82135933934,0.72581271536686709
+correlation-redis-get-cores2,drd_inserts,transactions,drd_latency,ns,60,4795.0415366476836,0.72378933919915256
+correlation-redis-get-cores2,acts_byp,events,read_activations,events,60,19969819443.835594,0.68940169731532586
