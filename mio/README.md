@@ -22,6 +22,9 @@ Extending `mio` to support other applications is easy --- one simply needs write
 
 ## Usage
 
+See [METRICS.md](METRICS.md) for brief descriptions of the metrics captured by
+the fio-randread correlation dataset.
+
 Make sure to configure `config.json` correctly based on your setup
 
 Running C2M Application (STREAM*) in isolation:
