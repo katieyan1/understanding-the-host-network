@@ -9,8 +9,11 @@ are then calculated across the sample indices present for both metrics.
 Results are sorted by correlation magnitude from strongest to weakest.
 
 By default, each result is written beside its input as
-``pairwise-covariance.csv``.  Run ``python3 calculate_pairwise_covariance.py
---help`` for other aggregation and output options.
+``pairwise-covariance.csv``. The per-experiment correlations are also pivoted
+by metric pair into ``.correlation-data/all-correlations.csv``, with an average
+correlation column sorted from highest to lowest. Run ``python3
+calculate_pairwise_covariance.py --help`` for other aggregation and output
+options.
 """
 
 from __future__ import annotations
@@ -29,7 +32,16 @@ from typing import Iterable
 
 INPUT_NAME = "dependable-metric-samples.csv"
 OUTPUT_NAME = "pairwise-covariance.csv"
+AGGREGATE_OUTPUT_NAME = "all-correlations.csv"
 REQUIRED_COLUMNS = {"experiment", "metric", "sample_index", "value", "unit"}
+PAIRWISE_REQUIRED_COLUMNS = {
+    "experiment",
+    "metric_a",
+    "unit_a",
+    "metric_b",
+    "unit_b",
+    "correlation",
+}
 
 
 @dataclass(frozen=True)
@@ -254,6 +266,158 @@ def write_rows(path: Path, rows: Iterable[CovarianceRow]) -> None:
         raise
 
 
+def write_aggregated_correlations(
+    source_paths: Iterable[Path], destination: Path
+) -> tuple[int, list[str]]:
+    """Pivot pairwise correlations into one column per experiment."""
+
+    correlations: dict[tuple[str, str], dict[str, float | None]] = defaultdict(dict)
+    pair_units: dict[tuple[str, str], tuple[str, str]] = {}
+    experiments: set[str] = set()
+
+    for source_path in source_paths:
+        with source_path.open(newline="", encoding="utf-8") as source:
+            reader = csv.DictReader(source)
+            missing_columns = PAIRWISE_REQUIRED_COLUMNS.difference(
+                reader.fieldnames or ()
+            )
+            if missing_columns:
+                missing = ", ".join(sorted(missing_columns))
+                raise ValueError(
+                    f"{source_path}: missing required column(s): {missing}"
+                )
+
+            for line_number, row in enumerate(reader, start=2):
+                experiment = row["experiment"].strip()
+                metric_a = row["metric_a"].strip()
+                metric_b = row["metric_b"].strip()
+                unit_a = row["unit_a"].strip()
+                unit_b = row["unit_b"].strip()
+                if not experiment or not metric_a or not metric_b:
+                    raise ValueError(
+                        f"{source_path}:{line_number}: experiment, metric_a, "
+                        "and metric_b must be non-empty"
+                    )
+
+                pair = (metric_a, metric_b)
+                units = (unit_a, unit_b)
+                previous_units = pair_units.setdefault(pair, units)
+                if previous_units != units:
+                    raise ValueError(
+                        f"{source_path}:{line_number}: pair {pair!r} has "
+                        f"inconsistent units {previous_units!r} and {units!r}"
+                    )
+                if experiment in correlations[pair]:
+                    raise ValueError(
+                        f"{source_path}:{line_number}: duplicate correlation for "
+                        f"experiment {experiment!r} and pair {pair!r}"
+                    )
+
+                correlation_text = row["correlation"].strip()
+                correlation: float | None = None
+                if correlation_text:
+                    try:
+                        correlation = float(correlation_text)
+                    except ValueError as error:
+                        raise ValueError(
+                            f"{source_path}:{line_number}: invalid correlation "
+                            f"{correlation_text!r}"
+                        ) from error
+                    if not math.isfinite(correlation) or not -1.0 <= correlation <= 1.0:
+                        raise ValueError(
+                            f"{source_path}:{line_number}: correlation must be "
+                            f"finite and between -1 and 1, got {correlation_text!r}"
+                        )
+
+                experiments.add(experiment)
+                correlations[pair][experiment] = correlation
+
+    experiment_columns = sorted(experiments)
+    average_column = "average_correlation"
+    reserved_columns = {
+        "metric_a",
+        "unit_a",
+        "metric_b",
+        "unit_b",
+        average_column,
+    }
+    conflicting_names = reserved_columns.intersection(experiment_columns)
+    if conflicting_names:
+        names = ", ".join(sorted(conflicting_names))
+        raise ValueError(f"experiment name(s) conflict with output columns: {names}")
+
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = [
+        "metric_a",
+        "unit_a",
+        "metric_b",
+        "unit_b",
+        *experiment_columns,
+        average_column,
+    ]
+    average_correlations: dict[tuple[str, str], float | None] = {}
+    for pair, experiment_values in correlations.items():
+        available_values = [
+            experiment_values[experiment]
+            for experiment in experiment_columns
+            if experiment_values.get(experiment) is not None
+        ]
+        average_correlations[pair] = (
+            math.fsum(available_values) / len(available_values)
+            if available_values
+            else None
+        )
+    sorted_pairs = sorted(
+        correlations,
+        key=lambda pair: (
+            average_correlations[pair] is None,
+            -average_correlations[pair]
+            if average_correlations[pair] is not None
+            else 0.0,
+            pair,
+        ),
+    )
+    temporary_name: str | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            newline="",
+            encoding="utf-8",
+            dir=destination.parent,
+            prefix=f".{destination.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as output:
+            temporary_name = output.name
+            writer = csv.DictWriter(output, fieldnames=fieldnames)
+            writer.writeheader()
+            for metric_a, metric_b in sorted_pairs:
+                unit_a, unit_b = pair_units[(metric_a, metric_b)]
+                row: dict[str, str] = {
+                    "metric_a": metric_a,
+                    "unit_a": unit_a,
+                    "metric_b": metric_b,
+                    "unit_b": unit_b,
+                }
+                for experiment in experiment_columns:
+                    value = correlations[(metric_a, metric_b)].get(experiment)
+                    row[experiment] = (
+                        format(value, ".17g") if value is not None else ""
+                    )
+                average = average_correlations[(metric_a, metric_b)]
+                row[average_column] = (
+                    format(average, ".17g") if average is not None else ""
+                )
+                writer.writerow(row)
+        os.replace(temporary_name, destination)
+    except BaseException:
+        if temporary_name is not None:
+            Path(temporary_name).unlink(missing_ok=True)
+        raise
+
+    return len(correlations), experiment_columns
+
+
 def output_path(input_path: Path, output_dir: Path | None) -> Path:
     if output_dir is None:
         return input_path.with_name(OUTPUT_NAME)
@@ -300,11 +464,13 @@ def main() -> int:
             f"no {INPUT_NAME} files found one directory below {args.data_dir}"
         )
 
+    destinations: list[Path] = []
     for input_path in inputs:
         series, units = read_metric_series(input_path, args.aggregation)
         rows, ignored = calculate_rows(series, units, args.ddof)
         destination = output_path(input_path, args.output_dir)
         write_rows(destination, rows)
+        destinations.append(destination)
 
         ignored_names = sorted(
             f"{experiment}:{metric}"
@@ -317,6 +483,16 @@ def main() -> int:
             else ""
         )
         print(f"{input_path} -> {destination} ({len(rows)} pairs){ignored_message}")
+
+    aggregate_dir = args.output_dir if args.output_dir is not None else args.data_dir
+    aggregate_destination = aggregate_dir / AGGREGATE_OUTPUT_NAME
+    pair_count, experiments = write_aggregated_correlations(
+        destinations, aggregate_destination
+    )
+    print(
+        f"{len(destinations)} pairwise files -> {aggregate_destination} "
+        f"({pair_count} metric pairs, {len(experiments)} experiments)"
+    )
 
     return 0
 
