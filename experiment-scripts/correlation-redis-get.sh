@@ -11,3 +11,5 @@ run_mio_with_sar "$label" 2 \
     --ant_writefrac 0 --ant_num_requests 27000000000 \
     --ant_duration "$WORKLOAD_DURATION" \
     --stats --stats_samples "$PCM_SAMPLES" --stats_gran "$PCM_GRANULARITY"
+
+export_correlation_csvs redis-get

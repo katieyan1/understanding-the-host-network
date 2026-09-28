@@ -1,11 +1,12 @@
 # Correlation experiment scripts
 
 These seven scripts reproduce the raw `correlation-*` groups in
-`.experiment-data`. Each script starts a 4,500-sample `sar` collection alongside
-`mio`; `mio` then records 4,500 one-second samples for each of the four Ice Lake
-PCM scopes. The PCM scopes are collected sequentially, so a complete run takes
-about five hours rather than 75 minutes. Run only one experiment at a time from
-an otherwise idle host.
+`.experiment-data` and then generate the corresponding CSVs under
+`.correlation-data/<group>`. Each script starts a 4,500-sample `sar` collection
+alongside `mio`; `mio` then records 4,500 one-second samples for each of the four
+Ice Lake PCM scopes. The PCM scopes are collected sequentially, so a complete
+run takes about five hours rather than 75 minutes. Run only one experiment at a
+time from an otherwise idle host.
 
 The scripts resolve the repository root themselves, require root privileges,
 and verify that `config.json` writes statistics to this checkout's
@@ -55,14 +56,30 @@ To inspect a command without running it or replacing output, use `DRY_RUN=1`:
 DRY_RUN=1 ./experiment-scripts/correlation-gapbs-pr.sh
 ```
 
-## Exporting the STREAM CSVs
+## CSV export
 
-The experiment scripts write raw logs. After `correlation-stream.sh` finishes,
-regenerate the five CSVs in `.correlation-data/stream` with:
+After its workload and all collectors finish successfully, each experiment
+script runs `extract_correlation.py` for its group. The exporter validates that
+every expected PCM and CPU scope contains exactly 4,500 samples, then writes:
+
+- `dependable-metric-samples.csv`
+- `dependable-metric-summary.csv`
+- `experiment-metadata.csv`
+- `pairwise-covariance.csv`
+- `high-correlation.csv`
+
+Once all seven group directories contain 4,500-sample pairwise results, the
+exporter also refreshes `.correlation-data/all-correlations.csv` and
+`.correlation-data/all-high-correlations.csv`. Until then, it reports that the
+aggregate refresh was skipped, so old and new sample lengths are not mixed.
+
+If a required raw log is missing or incomplete, the script exits nonzero rather
+than exporting it. To rerun an export without rerunning the workload, specify
+one of the seven group names shown by `--help`; for example:
 
 ```bash
-python3 extract_correlation_stream.py
+python3 extract_correlation.py stream
 ```
 
-The exporter requires exactly 4,500 samples for every expected PCM and CPU
-scope. It exits without replacing the CSVs if a log is missing or incomplete.
+The earlier STREAM-only command remains available as
+`python3 extract_correlation_stream.py`.

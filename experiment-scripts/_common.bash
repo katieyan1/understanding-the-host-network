@@ -8,6 +8,7 @@ set -euo pipefail
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 REPO_ROOT=$(cd -- "$SCRIPT_DIR/.." && pwd)
 EXPECTED_STATS_DIR="$REPO_ROOT/.experiment-data"
+CORRELATION_DATA_DIR="$REPO_ROOT/.correlation-data"
 PCM_SAMPLES=4500
 PCM_GRANULARITY=1
 PCM_GROUPS=4
@@ -120,4 +121,22 @@ run_mio_with_sar() {
     wait "$sar_pid"
     sar_pid=
     trap - EXIT INT TERM
+}
+
+export_correlation_csvs() {
+    local group=$1
+    local output_dir="$CORRELATION_DATA_DIR/$group"
+
+    if [[ ${DRY_RUN:-0} == 1 ]]; then
+        printf 'python3 %q %q --output-dir %q --expected-samples %q --sample-interval %q --workload-seconds %q\n' \
+            "$REPO_ROOT/extract_correlation.py" "$group" "$output_dir" \
+            "$PCM_SAMPLES" "$PCM_GRANULARITY" "$WORKLOAD_DURATION"
+        return 0
+    fi
+
+    python3 "$REPO_ROOT/extract_correlation.py" "$group" \
+        --output-dir "$output_dir" \
+        --expected-samples "$PCM_SAMPLES" \
+        --sample-interval "$PCM_GRANULARITY" \
+        --workload-seconds "$WORKLOAD_DURATION"
 }
