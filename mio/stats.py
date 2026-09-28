@@ -166,14 +166,27 @@ class StatStore:
         with open(filepath, 'r') as f:
             for line in f:
                 cols = line.split()
-                if len(cols) < 2 or not cols[1].isdigit():
+                if not cols:
                     continue
-                if averages_only and cols[0] != 'Average:':
+
+                if cols[0] == 'Average:':
+                    if not averages_only:
+                        continue
+                    cpu_col = 1
+                else:
+                    if averages_only:
+                        continue
+                    # Depending on the locale, sar prefixes samples with either
+                    # ``HH:MM:SS`` or ``HH:MM:SS AM/PM``. Locate the CPU column
+                    # after the optional meridiem field.
+                    if not re.fullmatch(r'\d{2}:\d{2}:\d{2}', cols[0]):
+                        continue
+                    cpu_col = 2 if len(cols) > 1 and cols[1] in ('AM', 'PM') else 1
+
+                if len(cols) <= cpu_col + 3 or not cols[cpu_col].isdigit():
                     continue
-                if not averages_only and cols[0] == 'Average:':
-                    continue
-                core_idx = int(cols[1])
-                cpu_used = float(cols[2]) + float(cols[4])
+                core_idx = int(cols[cpu_col])
+                cpu_used = float(cols[cpu_col + 1]) + float(cols[cpu_col + 3])
 
                 space_unit = 'CORE%d' % (core_idx)
                 if not space_unit in self.d[label]:

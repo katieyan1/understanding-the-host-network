@@ -54,3 +54,15 @@ To inspect a command without running it or replacing output, use `DRY_RUN=1`:
 ```bash
 DRY_RUN=1 ./experiment-scripts/correlation-gapbs-pr.sh
 ```
+
+## Exporting the STREAM CSVs
+
+The experiment scripts write raw logs. After `correlation-stream.sh` finishes,
+regenerate the five CSVs in `.correlation-data/stream` with:
+
+```bash
+python3 extract_correlation_stream.py
+```
+
+The exporter requires exactly 4,500 samples for every expected PCM and CPU
+scope. It exits without replacing the CSVs if a log is missing or incomplete.

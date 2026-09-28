@@ -240,7 +240,9 @@ def write_rows(path: Path, rows: Iterable[CovarianceRow]) -> None:
             delete=False,
         ) as destination:
             temporary_name = destination.name
-            writer = csv.DictWriter(destination, fieldnames=fieldnames)
+            writer = csv.DictWriter(
+                destination, fieldnames=fieldnames, lineterminator="\n"
+            )
             writer.writeheader()
             for row in rows:
                 writer.writerow(
@@ -389,7 +391,9 @@ def write_aggregated_correlations(
             delete=False,
         ) as output:
             temporary_name = output.name
-            writer = csv.DictWriter(output, fieldnames=fieldnames)
+            writer = csv.DictWriter(
+                output, fieldnames=fieldnames, lineterminator="\n"
+            )
             writer.writeheader()
             for metric_a, metric_b in sorted_pairs:
                 unit_a, unit_b = pair_units[(metric_a, metric_b)]
